@@ -1,0 +1,1 @@
+import{d as a,M as e}from"./QcC29EQ7.js";const l=a(!1),o=a(""),s=()=>({isModalOpen:e(l),selectedPlan:e(o),openModal:a=>{o.value=a||"",l.value=!0},closeModal:()=>{l.value=!1,o.value=""}});export{s as u};
