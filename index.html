@@ -79,6 +79,7 @@
       background: #f0f0f0;
     }
   </style>
+
   <style>
     body {
       margin: 0px !important;
@@ -98,6 +99,53 @@
     [data-v-6fa91414] .error {
       background: #f0f0f0;
       opacity: .5
+    }
+
+    html {
+      box-sizing: border-box;
+      width: 100%;
+      overflow-x: clip;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+    }
+
+    /* Hero mobile fixes */
+    @media (max-width: 768px) {
+      .hero-shell[data-v-ce15d7ca] {
+        width: 100%;
+        padding-inline: 1.25rem;
+      }
+
+      .hero__cta-group[data-v-ce15d7ca] {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        width: 100%;
+      }
+
+      .hero__cta-primary[data-v-ce15d7ca],
+      .hero__cta-secondary[data-v-ce15d7ca] {
+        width: 100%;
+        min-width: 0;
+        padding-inline: 0.5rem;
+        white-space: nowrap;
+      }
+
+      .video-inner-wrapper[data-v-7d06813c],
+      [dir="rtl"] .video-inner-wrapper[data-v-7d06813c] {
+        max-width: 100%;
+        transform: none;
+      }
     }
   </style>
   <style>
