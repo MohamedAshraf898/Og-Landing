@@ -37,7 +37,7 @@
   function initTypewriter() {
     const target = document.querySelector('.hero__typed');
     if (!target) return;
-    const phrases = ['صُممت لزيادة المبيعات', 'تعمل بالذكاء الاصطناعي', 'تدار بخبرة بشرية'];
+    const phrases = ['بدون إعلانات منفصلة عن استراتيجية البراند.', 'بدون محتوى بلا هدف', 'بدون حلول متفرقة'];
     if (reduceMotion) { target.textContent = phrases[0]; return; }
     let phrase = 0, letter = 0, deleting = false;
     function tick() {
@@ -77,8 +77,8 @@
     const program = gl.createProgram(); gl.attachShader(program, vertex); gl.attachShader(program, fragment); gl.linkProgram(program); gl.useProgram(program);
     const buffer = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     const coordinates = flipY
-      ? [-1,-1,0,0, 1,-1,1,0, -1,1,0,1, 1,1,1,1]
-      : [-1,-1,0,1, 1,-1,1,1, -1,1,0,0, 1,1,1,0];
+      ? [-1, -1, 0, 0, 1, -1, 1, 0, -1, 1, 0, 1, 1, 1, 1, 1]
+      : [-1, -1, 0, 1, 1, -1, 1, 1, -1, 1, 0, 0, 1, 1, 1, 0];
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(coordinates), gl.STATIC_DRAW);
     const position = gl.getAttribLocation(program, 'a_position');
     const texCoord = gl.getAttribLocation(program, 'a_texCoord');
@@ -104,12 +104,12 @@
     function render() {
       resize();
       if (colorVideo.readyState >= 2 && maskVideo.readyState >= 2) {
-        try { upload(0, colorTexture, colorVideo); upload(1, maskTexture, maskVideo); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); } catch (_) {}
+        try { upload(0, colorTexture, colorVideo); upload(1, maskTexture, maskVideo); gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); } catch (_) { }
       }
       window.requestAnimationFrame(render);
     }
     colorVideo.addEventListener('timeupdate', function () { if (Math.abs(maskVideo.currentTime - colorVideo.currentTime) > .12) maskVideo.currentTime = colorVideo.currentTime; });
-    Promise.all([colorVideo.play(), maskVideo.play()].map(function (p) { return p && p.catch(function () {}); }));
+    Promise.all([colorVideo.play(), maskVideo.play()].map(function (p) { return p && p.catch(function () { }); }));
     render();
   }
 
