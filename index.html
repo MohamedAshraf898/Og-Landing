@@ -15,6 +15,140 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <div id="contactModal"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999;">
+
+    <div
+      style="background:#fff; width:90%; max-width:500px; margin:80px auto; padding:25px; border-radius:10px; position:relative;">
+
+      <span onclick="closeModal()"
+        style="position:absolute; right:15px; top:10px; cursor:pointer; font-size:22px;">×</span>
+
+      <h3 style="margin-bottom:15px;">Contact Us</h3>
+
+      <!-- FORM HERE -->
+      <form id="contactForm" action="https://formspree.io/f/xjgjjenp" method="POST"
+        style="display:flex; flex-direction:column; gap:10px;">
+
+        <!-- Full Name -->
+        <input type="text" name="full_name" placeholder="Full Name" required
+          style="padding:12px; border:1px solid #ccc; border-radius:6px;">
+
+        <!-- Mobile Number (UAE fixed) -->
+        <div style="display:flex; gap:5px;">
+
+          <div style="display:flex; gap:5px;">
+
+            <!-- Country Code Dropdown -->
+            <select name="country_code"
+              style="padding:12px;color: #000;width: 80px;font-size: 12px; font-weight: 600; border:1px solid #ccc; border-radius:6px;">
+
+              <option value="+971" selected>🇦🇪 +971</option>
+              <option value="+966">🇸🇦 +966 </option>
+              <option value="+965">🇰🇼 +965 </option>
+              <option value="+973">🇧🇭 +973 </option>
+              <option value="+974">🇶🇦 +974</option>
+              <option value="+968">🇴🇲 +968</option>
+
+            </select>
+
+            <!-- Phone Number -->
+            <input type="tel" name="phone" placeholder="Mobile Number" required
+              style="flex:1; padding:12px; border:1px solid #ccc; border-radius:6px;">
+
+          </div>
+        </div>
+
+        <!-- Email -->
+        <input type="email" name="email" placeholder="Email Address" required
+          style="padding:12px; border:1px solid #ccc; border-radius:6px;">
+
+        <p id="successMessage" style="display:none; color:green; font-weight:bold;">
+          Message sent successfully ✅
+        </p>
+        <!-- Hidden full phone (optional but useful) -->
+        <input type="hidden" name="full_phone" id="fullPhone">
+        <button type="submit"
+          style="padding:12px; background:black; color:white; border:none; border-radius:6px; cursor:pointer;">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+  <script>
+    function openModal() {
+      document.getElementById("contactModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("contactModal").style.display = "none";
+    }
+
+  </script>
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMsg = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          successMsg.style.display = "block";
+          form.reset();
+
+          // ⬇️ close modal after 1.5s
+          setTimeout(() => {
+            closeModal();
+            successMsg.style.display = "none"; // reset for next open
+          }, 1500);
+
+        } else {
+          alert("Something went wrong ❌");
+        }
+
+      } catch (error) {
+        alert("Error sending message ❌");
+      }
+    });
+  </script>
+  <style>
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close-btn:hover {
+      color: red;
+      transform: scale(1.2);
+    }
+  </style>
+  <script>
+    window.onclick = function (event) {
+      let modal = document.getElementById("contactModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
   <style>
     /* Critical CSS - inlined for performance */
     html {
@@ -4724,8 +4858,8 @@
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200;300;400;500;600;700;800;900&amp;display=swap"
     as="style" onload="this.onload=null;this.rel=&quot;stylesheet&quot;">
-  <link rel="preload" href="hero_background.webp" as="image" fetchpriority="high">
-  <link rel="preload" href="benifit-avatar-purple.webp" as="image">
+  <link rel="preload" href="images/1-04.png" as="image" fetchpriority="high">
+  <link rel="preload" href="images/1-04.png" as="image">
   <link rel="modulepreload" as="script" crossorigin href="_nuxt/DhUSdntX.js">
   <link rel="modulepreload" as="script" crossorigin href="_nuxt/QcC29EQ7.js">
   <link rel="modulepreload" as="script" crossorigin href="_nuxt/D-mLKGxf.js">
@@ -4746,18 +4880,21 @@
   <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
   <link rel="prefetch" as="script" crossorigin href="_nuxt/BiDhu5xT.js">
   <link rel="prefetch" as="script" crossorigin href="_nuxt/CiDdExfD.js">
-  <meta name="description"
-    content="Scale your creative content across all platforms with AI-powered resizing and optimization.">
-  <meta property="og:image" content="Logo_1k.png">
+  <link rel="shortcut icon" href="images/1-04.png" type="image/x-icon">
+  <link rel="icon" href="images/1-04.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="images/1-04.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="images/1-04.png" sizes="180x180">
+  <link rel="manifest" href="images/1-04.png">
+  <meta property="og:image" content="images/1-04.png">
   <link rel="icon" type="image/png" href="images/1-04.png">
   <script type="text/javascript">(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KH6M646K');</script>
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KH6M646K');</script>
   <meta name="theme-color" content="#ff2b2b">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -4995,7 +5132,8 @@
 
               </div>
             </div>
-          </div><button id="cta-system" class="system__cta cta" q-gtm="cta system__cta cta-system" data-v-67409985>احصل
+          </div><button id="cta-system" class="system__cta cta" q-gtm="cta system__cta cta-system" data-v-67409985
+            onclick="openModal()">احصل
             على استشارة مجانية</button>
         </section>
         <section id="why-qeen-stack" class="why-qeen" aria-labelledby="why-qeen-title" top="80px" data-v-b27626f1
@@ -5020,8 +5158,8 @@
                           لبناء استراتيجية واضحة توجه جميع مراحل العمل.</p>
                       </div>
                       <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-1"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-1"
-                          data-v-74aff4f3>احصل على مراجعة مجانية</button></div>
+                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-1" data-v-74aff4f3
+                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
                     </div>
                   </div>
                 </div>
@@ -5038,8 +5176,8 @@
                           التجارية، ويجذب الجمهور، ويدعم الأهداف التجارية.</p>
                       </div>
                       <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-2"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-2"
-                          data-v-74aff4f3>احصل على مراجعة مجانية</button></div>
+                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-2" data-v-74aff4f3
+                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
                     </div>
                   </div>
                 </div>
@@ -5056,8 +5194,8 @@
                           المحتوى، وإدارة المنصات، والإعلانات الرقمية ضمن رؤية موحّدة ومتكاملة.</p>
                       </div>
                       <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-3"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-3"
-                          data-v-74aff4f3>احصل على مراجعة مجانية</button></div>
+                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-3" data-v-74aff4f3
+                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
                     </div>
                   </div>
                 </div>
@@ -5074,8 +5212,8 @@
                           ما نقدمه ونتخذ قرارات أكثر دقة وفاعلية.</p>
                       </div>
                       <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-4"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-4"
-                          data-v-74aff4f3>احصل على مراجعة مجانية</button></div>
+                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-4" data-v-74aff4f3
+                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
                     </div>
                   </div>
                 </div>
@@ -5098,13 +5236,13 @@
           <div class="client-results__track" data-v-2e0ce7eb>
             <div class="client-results__slider" data-v-2e0ce7eb>
               <div class="client-results__group" data-v-2e0ce7eb><!--[-->
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="nabataty.webp" alt="Nabataty"
+                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/الجوكر.webp" alt="Nabataty"
                     class="result-card__bg" data-v-b3611011>
                   <div class="result-card__overlay" data-v-b3611011></div>
                   <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Nabataty</h3>
-                    <p class="result-card__quote" data-v-b3611011>كنا نحصل على زيارات.. نعم، لكننا افتقدنا الاستقرار
-                      والاستمرارية. ومع كين، تغير كل شيء.</p>
+                    <h3 class="result-card__brand" data-v-b3611011>Eljoker</h3>
+                    <p class="result-card__quote" data-v-b3611011>تم عمل استراتيجية متكاملة وواضحة، ربطت أهداف البراند
+                      بخطوات عملية ساعدتنا على النمو والمنافسة بقوة في السوق</p>
                     <div class="result-card__author" data-v-b3611011>
                       <p class="result-card__name" data-v-b3611011>خالد الغامدي</p>
                       <p class="result-card__role" data-v-b3611011>المؤسس والرئيس التنفيذي</p>
@@ -5119,13 +5257,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="6th.webp" alt="6th street"
-                    class="result-card__bg" data-v-b3611011>
+                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Pochinki.webp"
+                    alt="6th street" class="result-card__bg" data-v-b3611011>
                   <div class="result-card__overlay" data-v-b3611011></div>
                   <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>6th street</h3>
-                    <p class="result-card__quote" data-v-b3611011>كنا في المقدمة، لكننا لم نكن نملك التحكم. الآن، نحن
-                      نتحكم في كل شئ بسهولة.</p>
+                    <h3 class="result-card__brand" data-v-b3611011>Pochinki</h3>
+                    <p class="result-card__quote" data-v-b3611011>الاهتمام بتصوير منتجاتنا بشكل احترافي، ونجح في إبراز
+                      هوية البراند وتقديم المحتوى بصورة تعكس جودته بشكل واضح.</p>
                     <div class="result-card__author" data-v-b3611011>
                       <p class="result-card__name" data-v-b3611011>هيتش مالهورتا</p>
                       <p class="result-card__role" data-v-b3611011>مدير التسويق</p>
@@ -5140,13 +5278,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="drowzy.jpg" alt="Drowzy"
+                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/MAZ.webp" alt="MAZ"
                     class="result-card__bg" data-v-b3611011>
                   <div class="result-card__overlay" data-v-b3611011></div>
                   <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Drowzy</h3>
-                    <p class="result-card__quote" data-v-b3611011>كنا ننفق الكثير لكن دون فهم حقيقي لما يحقق النتائج
-                      فعلياً. مع كين تغير كل شيء للأفضل.</p>
+                    <h3 class="result-card__brand" data-v-b3611011>MAZ</h3>
+                    <p class="result-card__quote" data-v-b3611011>ساعدونا على تنمية متجرنا الإلكتروني من خلال استراتيجية
+                      متكاملة جمعت
+                      بين المحتوى والإعلانات، وركزت على تحقيق نتائج فعلية وتحويل الزيارات إلى عملاء ومبيعات.»
+                    </p>
                     <div class="result-card__author" data-v-b3611011>
                       <p class="result-card__name" data-v-b3611011>علاء خليل</p>
                       <p class="result-card__role" data-v-b3611011>المؤسس</p>
@@ -5161,13 +5301,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="alrugaib.webp"
-                    alt="Al Rugaib Furniture" class="result-card__bg" data-v-b3611011>
+                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Dropgear.webp" alt="Dropgear"
+                    class="result-card__bg" data-v-b3611011>
                   <div class="result-card__overlay" data-v-b3611011></div>
                   <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Al Rugaib Furniture</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;امتلاك حلٍّ خالٍ من المتاعب يخدم عملاءنا بمحتوى
-                      عربي محلّي عالي الجودة ويُحسّن المبيعات في آنٍ واحد... هو أفضل حلٍّ للمحتوى العربي رأيناه.&quot;
+                    <h3 class="result-card__brand" data-v-b3611011>Dropgear</h3>
+                    <p class="result-card__quote" data-v-b3611011>توظّيف تقنيات الذكاء الاصطناعي بطريقة ذكية في تطوير
+                      الأفكار وتنفيذ المحتوى، مع الحفاظ على هوية البراند وطابعه الإبداعي
+
                     </p>
                     <div class="result-card__author" data-v-b3611011>
                       <p class="result-card__name" data-v-b3611011>حمد الروقيب</p>
@@ -5183,14 +5324,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="nilo.webp" alt="Nilo"
-                    class="result-card__bg" data-v-b3611011>
+                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Cloud Home.webp"
+                    alt="Cloud Home" class="result-card__bg" data-v-b3611011>
                   <div class="result-card__overlay" data-v-b3611011></div>
                   <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Nilo</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;قدّمت كين مستوى من جودة التسويق لم نستطع تحمّل
-                      تكاليفه من قبل. للمرة الأولى، تُحقّق حملاتنا مبيعات حقيقية وتفتح لنا طريقاً نحو عائد مربح.&quot;
-                    </p>
+                    <h3 class="result-card__brand" data-v-b3611011>Cloud Home</h3>
+                    <p class="result-card__quote" data-v-b3611011>من أول خطوة، فريق OG درس السوق والمنافسين بعمق،
+                      وساعدنا نحدد مكانة البراند والفرص الحقيقية للنمو والتميز
                     <div class="result-card__author" data-v-b3611011>
                       <p class="result-card__name" data-v-b3611011>غييرمو خيمينيز</p>
                       <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
@@ -5205,13 +5345,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="brownloft_cover.webp" alt="BrownLoft"
+                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/AMS.webp" alt="AMS"
                     class="result-card__bg" data-v-b3611011>
                   <div class="result-card__overlay" data-v-b3611011></div>
                   <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>BrownLoft</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;بعد سنوات من فقدان الأمل في التسويق الرقمي،
-                      غيّرت كين قواعد اللعبة. نحن الآن نحوّل معظم ميزانيتنا التسويقية إلى القنوات الرقمية.&quot;</p>
+                    <h3 class="result-card__brand" data-v-b3611011>AMS</h3>
+                    <p class="result-card__quote" data-v-b3611011>وجود الفريق في الإمارات انعكس على المحتوى بشكل واضح؛
+                      من خلال مراعاة الهوية الإماراتية وطبيعة الجمهور، وثقافة السوق المحلي في كل تفصيلة.</p>
                     <div class="result-card__author" data-v-b3611011>
                       <p class="result-card__name" data-v-b3611011>جوانا الصراف</p>
                       <p class="result-card__role" data-v-b3611011>المؤسسة والرئيسة التنفيذية</p>
@@ -5226,224 +5366,59 @@
                     </div>
                   </div>
                 </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="junaid.webp" alt="Junaid"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Junaid</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;بعد تجربة عدة وكالات، كانت كين الوحيدة التي
-                      حرّكت مؤشر العائد على الإنفاق لدينا، وحقّقت ارتفاعاً بنسبة ١١٪ في أقل من شهر. ناهيك عن الوقت الذي
-                      يوفّرونه لنا بإدارة أكثر من ٧٠ حملة عبر ٤ منصات وأكثر من ١٠ أسواق.&quot;</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>أنس إسماعيل</p>
-                      <p class="result-card__role" data-v-b3611011>رئيس قسم التجارة الإلكترونية</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+١١٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>٧٠٪</span><span class="result-card__metric-label" data-v-b3611011>الوقت
-                          الموفّر</span></div>
-                    </div>
-                  </div>
-                </div><!--]-->
-              </div>
-              <div class="client-results__group" aria-hidden="true" data-v-2e0ce7eb><!--[-->
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="nabataty.webp" alt="Nabataty"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Nabataty</h3>
-                    <p class="result-card__quote" data-v-b3611011>كنا نحصل على زيارات.. نعم، لكننا افتقدنا الاستقرار
-                      والاستمرارية. ومع كين، تغير كل شيء.</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>خالد الغامدي</p>
-                      <p class="result-card__role" data-v-b3611011>المؤسس والرئيس التنفيذي</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٥١٪</span><span class="result-card__metric-label"
-                          data-v-b3611011>الزيارات</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٣٤٪</span><span class="result-card__metric-label" data-v-b3611011>تكرار
-                          الشراء</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="6th.webp" alt="6th street"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>6th street</h3>
-                    <p class="result-card__quote" data-v-b3611011>كنا في المقدمة، لكننا لم نكن نملك التحكم. الآن، نحن
-                      نتحكم في كل شئ بسهولة.</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>هيتش مالهورتا</p>
-                      <p class="result-card__role" data-v-b3611011>مدير التسويق</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٣٨٪</span><span class="result-card__metric-label" data-v-b3611011>معدل
-                          التحويل</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٢٩٪</span><span class="result-card__metric-label" data-v-b3611011>تكرار
-                          الشراء</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="drowzy.jpg" alt="Drowzy"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Drowzy</h3>
-                    <p class="result-card__quote" data-v-b3611011>كنا ننفق الكثير لكن دون فهم حقيقي لما يحقق النتائج
-                      فعلياً. مع كين تغير كل شيء للأفضل.</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>علاء خليل</p>
-                      <p class="result-card__role" data-v-b3611011>المؤسس</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>٥ X</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٤٨٪</span><span class="result-card__metric-label" data-v-b3611011>الإيرادات
-                          من الإعلانات</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="alrugaib.webp"
-                    alt="Al Rugaib Furniture" class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Al Rugaib Furniture</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;امتلاك حلٍّ خالٍ من المتاعب يخدم عملاءنا بمحتوى
-                      عربي محلّي عالي الجودة ويُحسّن المبيعات في آنٍ واحد... هو أفضل حلٍّ للمحتوى العربي رأيناه.&quot;
-                    </p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>حمد الروقيب</p>
-                      <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٤٥٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>-٦٥٪</span><span class="result-card__metric-label" data-v-b3611011>تكلفة
-                          الإبداع</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="nilo.webp" alt="Nilo"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Nilo</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;قدّمت كين مستوى من جودة التسويق لم نستطع تحمّل
-                      تكاليفه من قبل. للمرة الأولى، تُحقّق حملاتنا مبيعات حقيقية وتفتح لنا طريقاً نحو عائد مربح.&quot;
-                    </p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>غييرمو خيمينيز</p>
-                      <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٥٣٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>-٣٥٪</span><span class="result-card__metric-label" data-v-b3611011>تكلفة
-                          الإضافة للسلة</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="brownloft_cover.webp" alt="BrownLoft"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>BrownLoft</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;بعد سنوات من فقدان الأمل في التسويق الرقمي،
-                      غيّرت كين قواعد اللعبة. نحن الآن نحوّل معظم ميزانيتنا التسويقية إلى القنوات الرقمية.&quot;</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>جوانا الصراف</p>
-                      <p class="result-card__role" data-v-b3611011>المؤسسة والرئيسة التنفيذية</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٣٤٪</span><span class="result-card__metric-label" data-v-b3611011>المبيعات
-                          عبر الإنترنت</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٨٠٪</span><span class="result-card__metric-label"
-                          data-v-b3611011>التفاعل</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="junaid.webp" alt="Junaid"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Junaid</h3>
-                    <p class="result-card__quote" data-v-b3611011>&quot;بعد تجربة عدة وكالات، كانت كين الوحيدة التي
-                      حرّكت مؤشر العائد على الإنفاق لدينا، وحقّقت ارتفاعاً بنسبة ١١٪ في أقل من شهر. ناهيك عن الوقت الذي
-                      يوفّرونه لنا بإدارة أكثر من ٧٠ حملة عبر ٤ منصات وأكثر من ١٠ أسواق.&quot;</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>أنس إسماعيل</p>
-                      <p class="result-card__role" data-v-b3611011>رئيس قسم التجارة الإلكترونية</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+١١٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>٧٠٪</span><span class="result-card__metric-label" data-v-b3611011>الوقت
-                          الموفّر</span></div>
-                    </div>
-                  </div>
-                </div><!--]-->
               </div>
             </div>
           </div><button id="cta-client-results" class="client-results__cta cta client_results__cta"
-            q-gtm="cta client_results__cta cta-client-results" data-v-2e0ce7eb>احصل على مراجعة مجانية</button>
+            q-gtm="cta client_results__cta cta-client-results" data-v-2e0ce7eb onclick="openModal()">احصل على مراجعة
+            مجانية</button>
         </section>
         <section id="plans" class="plans" data-v-b27626f1 data-v-fba517ea>
           <div class="plans__container" data-v-fba517ea>
-            <h2 class="plans__title" data-v-fba517ea>نظام واحد متكامل
-              يخدم نمو علامتك التجارية.</h2>
+            <h2 class="plans__title" data-v-fba517ea>لا نقدم خدمات منفصلة، بل نبني منظومة تسويقية متكاملة مصممة للنمو.
+            </h2>
             <div class="plans__subtitle" data-v-fba517ea><!--[-->
-              <p class="plans__subtitle-line" data-v-fba517ea>لا توجد رسوم ثابتة ولا التزامات شهرية.</p>
-              <p class="plans__subtitle-line" data-v-fba517ea>نحن نتولى بناء وإدارة منظومة الديجيتال ماركتنج الخاصة بك
-                بشكل كامل.</p>
-              <p class="plans__subtitle-line" data-v-fba517ea>لأن نجاحنا مرتبط بنجاحك.</p><!--]-->
+              <p class="plans__subtitle-line" data-v-fba517ea>لأننا نؤمن أن التسويق الفعّال لا يبدأ بالتنفيذ، بل يبدأ
+                بالفهم</p>
+              <p class="plans__subtitle-line" data-v-fba517ea>لذلك نجمع بين التحليل، والاستراتيجية، والإبداع، والتنفيذ،
+                والأداء ضمن منظومة واحدة.</p>
+              <p class="plans__subtitle-line" data-v-fba517ea>تعمل وفق رؤية واضحة وهدف مشترك.</p><!--]-->
             </div>
             <div class="plans__card" data-v-fba517ea>
-              <h3 class="plans__card-title" data-v-fba517ea>خطة النمو المتكامل</h3>
-              <p class="plans__card-line" data-v-fba517ea>نموذج قائم على الأداء فقط. بدون التزامات شهرية ثابتة،</p>
-              <p class="plans__card-line" data-v-fba517ea>بل نسبة من المبيعات التي نحققها معاً.</p>
+              <h3 class="plans__card-title" data-v-fba517ea>خدماتنا</h3>
+              <!-- <p class="plans__card-line" data-v-fba517ea>نموذج قائم على الأداء فقط. بدون التزامات شهرية ثابتة،</p>
+              <p class="plans__card-line" data-v-fba517ea>بل نسبة من المبيعات التي نحققها معاً.</p> -->
               <ul class="plans__features" data-v-fba517ea><!--[-->
-                <li data-v-fba517ea>منظومة ديجيتال ماركتنج شاملة بنظام تشغيل كين OS يمنحك التحكم الكامل</li>
-                <li data-v-fba517ea>الاستراتيجية والتوجيه لرسم المسار وتحديد الاتجاه الاستراتيجي لضمان نمو العلامة
-                  التجارية</li>
-                <li data-v-fba517ea>إدارة وتنفيذ الحملات الإعلانية الممولة بأعلى معايير الكفاءة</li>
-                <li data-v-fba517ea>إنتاج كرييتفز مخصّصة وموجّهة لتحقيق أفضل نتائج التحويل</li>
-                <li data-v-fba517ea>مراقبة الأداء وتطويره لحظة بلحظة لضمان ثبات واستقرار النتائج</li>
-                <li data-v-fba517ea>نظام دقيق لتتبع مصادر الزيارات وقياس العائد الفعلي لكل قنوات الديجيتال ماركتنج</li>
-                <li data-v-fba517ea>رقابة وتحليل وإشراف من خبراء لضمان دقة النظام وتوافقه مع أهدافك</li>
-                <li data-v-fba517ea>الحد الأدنى للإنفاق الإعلاني المطلوب هو +4,000 دولار (يتم دفعها من جانبك مباشرة
-                  للمنصات الإعلانية)</li><!--]-->
+                <li data-v-fba517ea>نحلل السوق والمنافسين وسلوك الجمهور لنحدد الفرص، ونبني قرارات تسويقية تمنح علامتك
+                  ميزة تنافسية واضحة.</li>
+                <li data-v-fba517ea>نحوّل أهداف علامتك إلى استراتيجية واضحة وخطة تسويقية متكاملة تحدد الاتجاه،
+                  الأولويات، والقنوات المناسبة للنمو.</li>
+                <li data-v-fba517ea>نطوّر محتوى إبداعيًا مبنيًا على فهم جمهورك، يعكس هوية علامتك ويوصل رسالتها بطريقة
+                  تجذب الانتباه وتحقق هدفًا واضحًا.</li>
+                <li data-v-fba517ea>نحوّل الأفكار والاستراتيجيات إلى محتوى بصري احترافي من خلال تصوير وإنتاج مصمم ليعكس
+                  قيمة علامتك ويترك أثرًا واضحًا.</li>
+                <li data-v-fba517ea>نبني هوية متماسكة تمنح علامتك حضورًا مميزًا، وتخلق تجربة واضحة ومتسقة في كل نقطة
+                  تواصل مع جمهورك.</li>
+                <li data-v-fba517ea>نحوّل رسائل علامتك وأفكارها إلى قصص إبداعية سلسة تساعد الجمهور على الفهم، التفاعل،
+                  وتذكّر العلامة.</li>
+                <li data-v-fba517ea>نحوّل خبرتك وشخصيتك إلى محتوى استراتيجي يبني حضورك الشخصي، ويعزز الثقة ويمنح علامتك
+                  صوتًا أكثر تأثيرًا.</li>
+                <li data-v-fba517ea>نخطط وندير حملاتك الإعلانية بناءً على البيانات، مع اختبار وتحسين مستمر لضمان توظيف
+                  الميزانية بالشكل الأكثر كفاءة وتحقيق نتائج قابلة للقياس.</li><!--]-->
               </ul>
             </div><button id="cta-our_plans-1" class="plans__cta cta our_plans__cta"
-              q-gtm="cta our_plans__cta cta-our_plans-1" data-v-fba517ea>احصل على مراجعة مجانية</button>
+              q-gtm="cta our_plans__cta cta-our_plans-1" data-v-fba517ea onclick="openModal()">احصل على مراجعة
+              مجانية</button>
           </div>
         </section>
-        <section class="cta-section" id="contact" data-v-b27626f1 data-v-2d40b38e>
+        <section class="cta-section" id="" data-v-b27626f1 data-v-2d40b38e>
           <div class="cta-section__video-wrapper" data-v-2d40b38e><canvas class="cta-section__canvas"
               data-v-2d40b38e></canvas><video src="videos/CTA%20Section_AR.mp4" muted loop playsinline autoplay
               preload="auto" class="cta-section__video-hidden" data-v-2d40b38e></video><video
               src="videos/CTA%20Section_AR%20-%20Mask.mp4" muted loop playsinline autoplay preload="auto"
               class="cta-section__video-hidden" data-v-2d40b38e></video></div>
           <div class="cta-section__content" data-v-2d40b38e><button id="cta-contact-book-demo"
-              class="cta-section__btn cta contact__cta" q-gtm="cta contact__cta cta-contact-book-demo"
-              data-v-2d40b38e>احصل على مراجعة مجانية</button></div>
+              class="cta-section__btn cta contact__cta" q-gtm="cta contact__cta cta-contact-book-demo" data-v-2d40b38e
+              onclick="openModal()">احصل على مراجعة مجانية</button></div>
         </section><!--]--><!--]-->
       </main>
       <footer class="layout__footer" data-v-0353b646>
