@@ -173,7 +173,7 @@
       align-items: center;
       position: relative;
       /* Fallback background */
-      background: linear-gradient(135deg, #ff2b2b 0%, #090000 100%);
+      background: linear-gradient(135deg, #E71A24 0%, #090000 100%);
       /* LCP optimized background */
       background-image: url('hero_background.webp');
       background-position: center;
@@ -218,8 +218,17 @@
   </style>
 
   <style>
+    body * {
+      color: #000 !important;
+    }
+
+    html {
+      background-color: #f5f5f5 !important;
+    }
+
     body {
       margin: 0px !important;
+      background-color: white !important;
     }
 
     [data-v-6fa91414] .loading {
@@ -295,7 +304,7 @@
     .layout__header[data-v-0353b646] {
       -webkit-backdrop-filter: blur(4px);
       backdrop-filter: blur(4px);
-      background: #00000080;
+      background: white;
       left: 0;
       padding: 24px;
       position: fixed;
@@ -351,7 +360,7 @@
 
     .nav__links a.active[data-v-0353b646],
     .nav__links a[data-v-0353b646]:hover {
-      color: #ff2b2b
+      color: #E71A24
     }
 
     .nav__cta[data-v-0353b646] {
@@ -393,7 +402,7 @@
     }
 
     .nav__locale[data-v-0353b646]:before {
-      background: linear-gradient(90deg, #ff2b2b, #ffffff);
+      background: linear-gradient(90deg, #E71A24, #ffffff);
       border-radius: 15px;
       content: "";
       inset: 0;
@@ -407,8 +416,8 @@
     }
 
     .nav__locale[data-v-0353b646]:hover {
-      background: #ff2b2b0f;
-      color: #ff2b2b
+      background: #E71A240f;
+      color: #E71A24
     }
 
     .layout__header--light .nav__links a[data-v-0353b646] {
@@ -446,7 +455,7 @@
     }
 
     .layout__main[data-v-0353b646] {
-      background: #000;
+      background: white;
       flex: 1;
       padding-top: 88px
     }
@@ -584,7 +593,7 @@
       }
 
       .nav__locale--mobile[data-v-0353b646]:before {
-        background: linear-gradient(270deg, #ff2b2b, #ffffff);
+        background: linear-gradient(270deg, #E71A24, #ffffff);
         border-radius: 15px;
         content: "";
         inset: 0;
@@ -598,8 +607,8 @@
       }
 
       .nav__locale--mobile[data-v-0353b646]:hover {
-        background: #ff2b2b0f;
-        color: #ff2b2b
+        background: #E71A240f;
+        color: #E71A24
       }
 
       .nav__hamburger[data-v-0353b646] {
@@ -627,7 +636,7 @@
       }
 
       .nav__hamburger span[data-v-0353b646] {
-        background-color: #ff2b2b;
+        background-color: #E71A24;
         display: none;
         height: 2px;
         transition: all .3s ease;
@@ -708,11 +717,11 @@
 
       .nav__mobile-links a.active[data-v-0353b646],
       .nav__mobile-links a[data-v-0353b646]:hover {
-        color: #ff2b2b
+        color: #E71A24
       }
 
       .nav__mobile-links a.active[data-v-0353b646]:before {
-        background-color: #ff2b2b;
+        background-color: #E71A24;
         border-radius: 1.5px;
         content: "";
         height: 19px;
@@ -829,7 +838,7 @@
   <style>
     #hero[data-v-ce15d7ca] {
       align-items: stretch;
-      background: linear-gradient(180deg, #000 0, #111111);
+      background: #fff;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -873,7 +882,7 @@
     }
 
     .hero__title[data-v-ce15d7ca] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-family: Boldonse, sans-serif;
       font-size: 17px;
       font-weight: 400;
@@ -891,7 +900,7 @@
     }
 
     .hero__subtitle[data-v-ce15d7ca] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-size: clamp(1.25rem, 4vw, 2.5rem);
       font-weight: 300;
       line-height: 1.35;
@@ -921,7 +930,7 @@
     }
 
     .hero__media[data-v-ce15d7ca]:before {
-      background: linear-gradient(270deg, #ff2b2b, #ffffff);
+      background: linear-gradient(270deg, #E71A24, #ffffff);
       border-radius: 9999px;
       content: "";
       inset: 0;
@@ -941,7 +950,7 @@
 
     .hero__typed[data-v-ce15d7ca],
     [dir=rtl] .hero__typed[data-v-ce15d7ca] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-size: clamp(1rem, 12vw, 4rem);
       letter-spacing: .05em;
       line-height: 1;
@@ -982,10 +991,10 @@
 
     .hero__cta-primary[data-v-ce15d7ca] {
       align-items: center;
-      background-color: #ff2b2b;
+      background-color: #E71A24;
       border: none;
       border-radius: 1.125rem;
-      color: #111111;
+      color: white !important;
       cursor: pointer;
       display: inline-flex;
       font-family: Grift, sans-serif;
@@ -1029,7 +1038,7 @@
     }
 
     .hero__cta-secondary[data-v-ce15d7ca]:before {
-      background: linear-gradient(270deg, #ff2b2b, #ffffff);
+      background: linear-gradient(270deg, #E71A24, #ffffff);
       border-radius: 1.125rem;
       content: "";
       inset: 0;
@@ -1043,8 +1052,8 @@
     }
 
     .hero__cta-secondary[data-v-ce15d7ca]:hover {
-      background-color: #ff2b2b14;
-      color: #ff2b2b
+      background-color: #E71A2414;
+      color: #E71A24
     }
 
     .hero__animation-wrapper[data-v-ce15d7ca] {
@@ -1272,7 +1281,7 @@
       }
 
       .hero--arabic .hero__title[data-v-ce15d7ca] {
-        color: #ff2b2b;
+        color: #E71A24;
         font-size: 7.5rem;
         font-weight: 800;
         line-height: .9;
@@ -1282,7 +1291,7 @@
       }
 
       .hero--arabic .hero__dots[data-v-ce15d7ca] {
-        color: #ff2b2b;
+        color: #E71A24;
         font-family: Beiruti, sans-serif;
         font-size: inherit;
         font-weight: 800;
@@ -1316,13 +1325,15 @@
       }
 
       [dir=rtl] .hero__media[data-v-ce15d7ca] {
+        background-color: #E71A24;
         height: 8.5rem;
         margin-bottom: 1rem
       }
 
       [dir=rtl] .hero__typed[data-v-ce15d7ca] {
-        font-size: clamp(4rem, 5.5vw, 5.5rem);
-        font-weight: 200;
+        color: white !important;
+        font-size: clamp(4rem, 5.5vw, 4rem);
+        font-weight: 600;
         letter-spacing: 0
       }
 
@@ -1395,7 +1406,7 @@
       }
 
       .hero--arabic .hero__dots[data-v-ce15d7ca] {
-        color: #ff2b2b;
+        color: #E71A24;
         font-size: inherit;
         line-height: inherit;
         vertical-align: middle
@@ -1450,7 +1461,7 @@
   <style>
     .trusted-brands[data-v-b4024979] {
       overflow: hidden;
-      padding: 0 0 2rem
+      padding: 2rem 0 2rem
     }
 
     .trusted-brands__container[data-v-b4024979] {
@@ -1502,6 +1513,7 @@
     }
 
     .trusted-brands__group[data-v-b4024979] {
+      padding-bottom: 1.5rem;
       align-items: center;
       display: flex;
       gap: var(--gap);
@@ -1666,7 +1678,7 @@
     }
 
     .problem-shift__title[data-v-ca9bb102] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-family: Boldonse, sans-serif;
       font-size: 2.1875rem;
       font-weight: 400;
@@ -1732,7 +1744,7 @@
     }
 
     .problem-shift__panel--after[data-v-ca9bb102] {
-      background: #ff2b2b0d;
+      background: #E71A240d;
       border: 1px solid rgba(143, 232, 96, .3);
       margin-top: 1.5rem;
       min-height: 12.5rem;
@@ -1770,7 +1782,7 @@
     }
 
     .panel__dot--green[data-v-ca9bb102] {
-      background: #ff2b2b
+      background: #E71A24
     }
 
     .panel__badge[data-v-ca9bb102] {
@@ -1782,7 +1794,7 @@
     }
 
     .panel__badge--green[data-v-ca9bb102] {
-      color: #ff2b2b
+      color: #E71A24
     }
 
     .panel__bars[data-v-ca9bb102] {
@@ -1836,7 +1848,7 @@
     }
 
     .panel__kpi-val[data-v-ca9bb102] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-size: .625rem;
       font-weight: 700;
       line-height: 1.2
@@ -1851,9 +1863,9 @@
 
     .panel__proactive[data-v-ca9bb102] {
       align-self: flex-start;
-      background: #ff2b2b1a;
+      background: #E71A241a;
       border-radius: .25rem;
-      color: #ff2b2b;
+      color: #E71A24;
       font-size: .375rem;
       font-weight: 600;
       letter-spacing: .06em;
@@ -1887,7 +1899,7 @@
     }
 
     .problem-shift__card-value[data-v-ca9bb102] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-size: 1rem;
       font-weight: 700;
       line-height: 1.2
@@ -1910,7 +1922,7 @@
 
     @media (max-width:47.99rem) {
       [dir=rtl] .problem-shift__title[data-v-ca9bb102] {
-        color: #ff2b2b;
+        color: #E71A24;
         font-size: 5rem;
         font-weight: 800;
         line-height: .92;
@@ -2245,8 +2257,8 @@
       }
 
       .problem-shift--arabic .problem-shift__block--shift[data-v-ca9bb102] {
-        align-items: flex-end;
-        text-align: left
+        align-items: flex-start;
+        text-align: right;
       }
     }
 
@@ -2422,7 +2434,7 @@
     }
 
     .lbl[data-v-100b91bc] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-size: clamp(5px, 1.2vw, 12px);
       font-weight: 700;
       letter-spacing: .3px;
@@ -2477,7 +2489,7 @@
     }
 
     .handle[data-v-100b91bc]:focus-visible {
-      box-shadow: 0 0 0 3px #ff2b2b80, 0 2px 6px #0006
+      box-shadow: 0 0 0 3px #E71A2480, 0 2px 6px #0006
     }
 
     .chart[data-v-100b91bc] {
@@ -2486,7 +2498,7 @@
       background: linear-gradient(180deg, #2a16164d, #1a0a0a2e);
       border: 1px solid rgba(222, 255, 205, .28);
       border-radius: 10px;
-      box-shadow: 0 22px 52px #00000042, inset 0 1px #ffffff47, inset 0 -18px 30px #0000000f, 0 0 0 1px #ff2b2b0f;
+      box-shadow: 0 22px 52px #00000042, inset 0 1px #ffffff47, inset 0 -18px 30px #0000000f, 0 0 0 1px #E71A240f;
       overflow: hidden;
       padding: 2px;
       position: absolute;
@@ -2715,7 +2727,7 @@
     .system__card[data-v-67409985] {
       align-items: center;
       background: #111111cc;
-      border: 1px solid #ff2b2b;
+      border: 1px solid #E71A24;
       border-radius: 12px;
       display: flex;
       flex-direction: column;
@@ -2735,7 +2747,7 @@
     }
 
     .system__card-text[data-v-67409985] {
-      color: #ff2b2b;
+      color: white !important;
       font-family: inherit;
       font-size: 25px;
       font-weight: 700;
@@ -2746,7 +2758,7 @@
 
     .system__cta[data-v-67409985] {
       align-items: center;
-      background-color: #ff2b2b;
+      background-color: #E71A24;
       border: none;
       border-radius: 18px;
       color: #111111;
@@ -2911,8 +2923,9 @@
     }
 
     .why-qeen__title[data-v-bde5893a] {
+      direction: rtl;
       color: #111111;
-      font-size: 36px;
+      font-size: 70px;
       font-weight: 400;
       line-height: 1.15;
       margin: 0 0 12px
@@ -2923,9 +2936,10 @@
     }
 
     .why-qeen__subtitle[data-v-bde5893a] {
+      line-height: 2.25;
       color: #111111;
       font-family: Grift, sans-serif;
-      font-size: 13px;
+      font-size: 18px;
       font-weight: 400;
       letter-spacing: 0;
       line-height: 15px;
@@ -3071,7 +3085,7 @@
       }
 
       .why-qeen__chip--active[data-v-bde5893a] {
-        background: #ff2b2b;
+        background: #E71A24;
         color: #111111;
         font-weight: 600
       }
@@ -3134,6 +3148,7 @@
 
     .mc[data-v-74aff4f3],
     .mc__inner[data-v-74aff4f3] {
+      direction: rtl;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -3145,7 +3160,7 @@
     }
 
     .mc__graphic[data-v-74aff4f3] {
-      background: linear-gradient(90deg, #ff2b2b, #ffffff);
+      background: linear-gradient(90deg, #E71A24, #ffffff);
       border-radius: 30px;
       flex-shrink: 0;
       margin-bottom: 28px;
@@ -3184,11 +3199,13 @@
     .mc__desc[data-v-74aff4f3],
     .mc__title[data-v-74aff4f3] {
       color: #111111;
-      text-align: start;
+      text-align: right;
       white-space: pre-line
     }
 
     .mc__desc[data-v-74aff4f3] {
+      text-align: right;
+
       font-family: inherit;
       font-size: 13px;
       line-height: 1.5;
@@ -3201,7 +3218,7 @@
 
     .mc__cta[data-v-74aff4f3] {
       align-items: center;
-      background: #ff2b2b;
+      background: #E71A24;
       border: none;
       border-radius: 18px;
       color: #111111;
@@ -3277,7 +3294,7 @@
         letter-spacing: 0;
         line-height: 15px;
         max-width: 40ch;
-        text-align: left;
+        text-align: right;
         text-wrap: pretty
       }
 
@@ -3489,7 +3506,6 @@
   </style>
   <style>
     .client-results[data-v-2e0ce7eb] {
-      background: linear-gradient(180deg, #000, #ffffff);
       flex-direction: column;
       overflow: hidden;
       padding: 60px 0 50px
@@ -3533,7 +3549,7 @@
     }
 
     .client-results__title[data-v-2e0ce7eb] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-family: Boldonse, sans-serif;
       font-size: 17px;
       font-weight: 400;
@@ -3543,7 +3559,7 @@
     }
 
     .client-results__subtitle[data-v-2e0ce7eb] {
-      color: #ff2b2b;
+      color: #E71A24;
       font-family: inherit;
       font-size: 20px;
       font-weight: 400;
@@ -3586,7 +3602,7 @@
 
     .client-results__cta[data-v-2e0ce7eb] {
       align-items: center;
-      background-color: #ff2b2b;
+      background-color: #E71A24;
       border: none;
       border-radius: 18px;
       color: #111111;
@@ -3727,7 +3743,7 @@
   <style>
     .result-card[data-v-b3611011] {
       background-color: #000;
-      border: .5px solid #ff2b2b;
+      border: .5px solid #E71A24;
       border-radius: 12px;
       flex-shrink: 0;
       height: 400px;
@@ -3752,7 +3768,7 @@
     }
 
     .result-card__content[data-v-b3611011] {
-      color: #ff2b2b;
+      color: #E71A24;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -3936,7 +3952,7 @@
   </style>
   <style>
     .plans[data-v-fba517ea] {
-      background: linear-gradient(180deg, #ffffff 0, #ff2b2b);
+      background: linear-gradient(180deg, #ffffff 0, #E71A24);
       padding: 80px 0 0
     }
 
@@ -3996,7 +4012,7 @@
     }
 
     .plans__card[data-v-fba517ea]:before {
-      background: linear-gradient(to bottom right, #ff2b2b, #ffffff);
+      background: linear-gradient(to bottom right, #E71A24, #ffffff);
       border-radius: 12px;
       content: "";
       inset: 0;
@@ -4063,7 +4079,7 @@
       background-color: #111111;
       border: none;
       border-radius: 18px;
-      color: #ff2b2b;
+      color: #E71A24;
       cursor: pointer;
       display: inline-flex;
       font-family: inherit;
@@ -4204,7 +4220,7 @@
   </style>
   <style>
     .cta-section[data-v-2d40b38e] {
-      background: linear-gradient(180deg, #ff2b2b 0, #111111 97%);
+      background: linear-gradient(180deg, #E71A24 0, #111111 97%);
       flex-direction: column;
       gap: 1.25rem;
       justify-content: flex-start;
@@ -4263,7 +4279,7 @@
     }
 
     .cta-section__btn[data-v-2d40b38e] {
-      background-color: #ff2b2b;
+      background-color: #E71A24;
       border: none;
       border-radius: 18px;
       color: #111111;
@@ -4476,6 +4492,19 @@
       display: flex;
       flex-direction: column;
       gap: 16px
+    }
+
+    #client-results,
+    #client-results * {
+      color: #fff !important;
+    }
+
+    #client-results .result-card__brand {
+      color: red !important;
+    }
+
+    #client-results .result-card {
+      border: 2px solid red !important;
     }
 
     .form-title[data-v-f1abf1c4] {
@@ -4895,7 +4924,7 @@
           j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
             '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-KH6M646K');</script>
-  <meta name="theme-color" content="#ff2b2b">
+  <meta name="theme-color" content="#E71A24">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="format-detection" content="telephone=no">
@@ -4944,7 +4973,7 @@
         </div>
       </header>
       <main class="layout__main" data-v-0353b646><!--[--><!--[-->
-        <section id="hero" class="hero--arabic" data-v-b27626f1 data-v-ce15d7ca>
+        <section id="hero" class="hero--arabic" data-v-b27626f1 data-v-ce15d7ca style="background-color: white;">
           <div class="hero-shell" data-v-ce15d7ca>
             <div class="hero-container" data-v-ce15d7ca>
               <section class="hero-section-1" data-v-ce15d7ca>
@@ -4964,8 +4993,8 @@
                 <div class="hero__cta-group" data-v-ce15d7ca><button id="cta-primary-hero"
                     class="hero__cta-primary cta hero__cta" q-gtm="cta hero__cta cta-primary-hero" data-v-ce15d7ca>احجز
                     على مراجعة مجانية</button><a href="#how-it-works" id="cta-secondary-hero"
-                    class="hero__cta-secondary cta hero__cta" q-gtm="cta hero__cta cta-secondary-hero"
-                    data-v-ce15d7ca>اكتشف تفاصيل النظام</a></div>
+                    class="hero__cta-secondary cta hero__cta" q-gtm="cta hero__cta cta-secondary-hero" data-v-ce15d7ca
+                    style="color: #000 !important;">اكتشف تفاصيل النظام</a></div>
                 <div class="hero__animation-wrapper" data-v-ce15d7ca>
                   <div class="hero__video-container" data-v-ce15d7ca data-v-7d06813c>
                     <div class="video-inner-wrapper" data-v-7d06813c><canvas class="hero__canvas"
@@ -4978,6 +5007,16 @@
               </section>
             </div>
           </div>
+          <style>
+            #cta-secondary-hero {
+              border: .2px solid #e4e4e7 !important;
+            }
+
+            .trusted-brands__title,
+            .trusted-brands__subtitle {
+              color: #fff !important;
+            }
+          </style>
         </section>
         <div class="trusted-problem-wrapper" data-v-b27626f1>
           <section id="trusted-brands" class="trusted-brands" data-v-b27626f1 data-v-b4024979>
@@ -4988,453 +5027,480 @@
               <div class="trusted-brands__scroll-wrapper" data-v-b4024979>
                 <div class="trusted-brands__rail" style="--duration:18s;" data-v-b4024979>
                   <div class="trusted-brands__group" data-v-b4024979><!--[-->
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/1.svg" alt="Brand 1"
-                        class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/2.svg" alt="Brand 2"
-                        class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/3.svg" alt="Brand 3"
-                        class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/4.svg" alt="Brand 4"
-                        class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/5.svg" alt="Brand 5"
-                        class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/6.svg" alt="Brand 6"
-                        class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/7.svg" alt="Brand 7"
-                        class="trusted-brands__logo" loading="lazy" decoding="async" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/8.svg" alt="Brand 8"
-                        class="trusted-brands__logo" loading="lazy" decoding="async" data-v-b4024979></div><!--]-->
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard 2.webp"
+                        alt="Brand 1" class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979>
+                    </div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard 3.webp"
+                        alt="Brand 2" class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979>
+                    </div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard 4.webp"
+                        alt="Brand 3" class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979>
+                    </div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard-5.webp"
+                        alt="Brand 4" class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979>
+                    </div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard-6.webp"
+                        alt="Brand 5" class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979>
+                    </div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard-7.webp"
+                        alt="Brand 6" class="trusted-brands__logo" loading="eager" decoding="async" data-v-b4024979>
+                    </div>
+
                   </div>
                   <div class="trusted-brands__group" aria-hidden="true" data-v-b4024979><!--[-->
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/1.svg" alt="Brand 1"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/2.svg" alt="Brand 2"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/3.svg" alt="Brand 3"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/4.svg" alt="Brand 4"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/5.svg" alt="Brand 5"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/6.svg" alt="Brand 6"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/7.svg" alt="Brand 7"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
-                    <div class="trusted-brands__item" data-v-b4024979><img src="brands%20logos/8.svg" alt="Brand 8"
-                        class="trusted-brands__logo" loading="lazy" data-v-b4024979></div><!--]-->
-                  </div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard 2.webp"
+                        alt="Brand 1" class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard 3.webp"
+                        alt="Brand 2" class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard 4.webp"
+                        alt="Brand 3" class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard-5.webp"
+                        alt="Brand 4" class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard-6.webp"
+                        alt="Brand 5" class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
+                    <div class="trusted-brands__item" data-v-b4024979><img src="images/trusted by/Artboard-7.webp"
+                        alt="Brand 6" class="trusted-brands__logo" loading="lazy" data-v-b4024979></div>
+
+                  </div><!--]-->
                 </div>
               </div>
             </div>
-          </section>
-          <section id="problem-shift" class="problem-shift problem-shift--arabic" data-v-b27626f1 data-v-ca9bb102>
-            <div class="problem-shift__container" data-v-ca9bb102>
-              <div class="problem-shift__block problem-shift__block--problem" data-v-ca9bb102>
-                <h2 class="problem-shift__title" data-v-ca9bb102><br data-v-ca9bb102> المشكلة</h2>
-                <p class="problem-shift__subtitle" data-v-ca9bb102><span data-v-ca9bb102>ليست في التسويق </span><span
-                    data-v-ca9bb102>بل في غياب الرؤية.</span></p>
-                <p class="problem-shift__body" data-v-ca9bb102>فوضى المحتوى، تعدد الأدوات، أفكار بدون اتجاه، إعلانات
-                  تعمل بمعزل عن الـ Creative والاستراتيجية ما ترتبط بباقي رحلة العميل.
-                  <br data-v-ca9bb102>والنتيجة؟
-                  ميزانية تُصرف، ومجهود يُبذل، لكن النمو ما يكون بالمستوى المتوقع.
-                  نحن نربط كل جزء ليعمل ضمن منظومة واحدة.
-              </div>
-              <div class="stage-wrapper" data-v-ca9bb102 data-v-100b91bc>
-                <div class="stage" style="--scroll-y:0px;" data-v-100b91bc>
-                  <div class="bg-photo" data-v-100b91bc><img src="images/shift-section/1 (1).webp" alt="Campaign hero"
-                      draggable="false" data-v-100b91bc></div>
-                  <div class="chart chart-conv chart--embedded-shell" data-v-100b91bc><img
-                      src="images/shift-section/c-rate-ar.png" alt="Conversion Rate" draggable="false" data-v-100b91bc>
-                  </div>
-                  <div class="chart chart-growth chart--embedded-shell" data-v-100b91bc><img
-                      src="images/shift-section/g-rate-ar.png" alt="Growth Rate" draggable="false" data-v-100b91bc>
-                  </div>
-                  <div class="chart chart-spend chart--embedded-shell" data-v-100b91bc><img
-                      src="images/shift-section/spend-ar.png" alt="Spend vs Revenue" draggable="false" data-v-100b91bc>
-                  </div>
-                  <div class="chart chart-campaign chart--embedded-shell" data-v-100b91bc><img
-                      src="images/shift-section/gorwth-ar.png" alt="Campaign Growth" draggable="false" data-v-100b91bc>
-                  </div>
-                  <div class="compare" style="--pos:35%;" data-v-100b91bc><img class="compare-img img-before"
-                      src="images/shift-section/قبل.webp" alt="Before — product" draggable="false" data-v-100b91bc>
-                    <div class="after-wrap" data-v-100b91bc><img class="compare-img img-after"
-                        src="images/shift-section/بعد.webp" alt="After — model wearing product" draggable="false"
-                        data-v-100b91bc></div><span class="lbl lbl-before" style="opacity:1;"
-                      data-v-100b91bc>قبل</span><span class="lbl lbl-after" style="opacity:1;"
-                      data-v-100b91bc>بعد</span>
-                    <div class="divider" aria-hidden="true" data-v-100b91bc></div>
-                    <div class="handle" role="slider" aria-label="Drag to compare before and after" aria-valuenow="35"
-                      aria-valuemin="0" aria-valuemax="100" tabindex="0" data-v-100b91bc></div>
-                  </div>
-                </div>
-              </div>
-              <div class="problem-shift__block problem-shift__block--shift" data-v-ca9bb102>
-                <h2 class="problem-shift__title" data-v-ca9bb102><br data-v-ca9bb102> الحل</h2>
-                <p class="problem-shift__subtitle" data-v-ca9bb102><span data-v-ca9bb102>نحوّل التسويق من جهود متفرقة
-                    إلى منظومة متكاملة.
-                  </span><span data-v-ca9bb102>في OG، نبدأ بفهم علامتك التجارية وأهدافها، ثم نربط كل مرحلة ضمن مسار
-                    واضح، من بناء الاستراتيجية إلى تنفيذ المحتوى وقياس الأداء والنتائج.</span></p>
-              </div>
-            </div>
-          </section>
         </div>
-        <section id="how-it-works" class="system" data-v-b27626f1 data-v-67409985><img
-            src="images/system/gear-small.svg" alt="" class="system__gear system__gear--large"
-            style="transform:rotate(0deg);" data-v-67409985><img src="images/system/gear-large.svg" alt=""
-            class="system__gear system__gear--small" style="transform:rotate(0deg);" data-v-67409985>
-          <div class="system__header" data-v-67409985>
-            <p class="system__subtitle" data-v-67409985>منظومة متكاملة</p>
-            <h2 class="system__title" data-v-67409985>لبناء حضور علامتك ونموها </h2>
-          </div>
-          <div class="system__track" data-v-67409985>
-            <div class="system__slider" data-v-67409985>
-              <div class="system__group" data-v-67409985><!--[-->
-                <div class="system__card" data-v-67409985><img src="images/system/system-section3.svg"
-                    alt="تحليل عميق لعلامتك التجارية وأهدافك" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985> نبني استراتيجية واضحة تحدد اتجاه علامتك وأهدافها.
-                  </p>
-                </div>
-                <div class="system__card" data-v-67409985><img src="images/system/system-section4.svg"
-                    alt="تخطيط استراتيجي لضمان النتائج" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985> نصنع محتوى هادف يعكس هوية علامتك ويخاطب جمهورك.</p>
-                </div>
-                <div class="system__card" data-v-67409985><img src="images/system/system-section5.svg"
-                    alt="إدارة شاملة تضمن تناغم الكرييتفز مع الأداء" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985> نحوّل الأفكار إلى محتوى احترافي يحقق مؤشرات الأداء.
-                  </p>
-                </div>
-                <div class="system__card" data-v-67409985><img src="images/system/system-section2.svg"
-                    alt="تطوير استباقي مستمر يعالج الثغرات قبل حدوثها" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985> نبني حضورًا شخصيًا مؤثرًا عبر البودكاست.
-                  </p>
-                </div>
-                <div class="system__card" data-v-67409985><img src="images/system/system-section1.svg"
-                    alt="استراتيجية نمو تضاعف نجاحك باستمرار" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985>نقرأ السوق الإماراتي ونحلل المنافسين لتحديد الفرص</p>
-                </div><!--]-->
-              </div>
-              <div class="system__group" aria-hidden="true" data-v-67409985><!--[-->
-                <div class="system__card" data-v-67409985><img src="images/system/system-section3.svg"
-                    alt="تحليل عميق لعلامتك التجارية وأهدافك" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985> نحوّل رسالتك إلى قصة تصل للجمهور وتبقى في ذاكرته.
-                  </p>
-                </div>
-                <div class="system__card" data-v-67409985><img src="images/system/system-section4.svg"
-                    alt="تخطيط استراتيجي لضمان النتائج" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985> نوظف الذكاء الاصطناعي لتوسيع إمكانيات المحتوى والإنتاج.
-                  </p>
-                </div>
-                <div class="system__card" data-v-67409985><img src="images/system/system-section5.svg"
-                    alt="إدارة شاملة تضمن تناغم الكرييتفز مع الأداء" class="system__card-icon" data-v-67409985>
-                  <p class="system__card-text" data-v-67409985> نوظف المحتوى والإبداع لتحقيق أهداف تسويقية قابلة للقياس.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-          </div><button id="cta-system" class="system__cta cta" q-gtm="cta system__cta cta-system" data-v-67409985
-            onclick="openModal()">احصل
-            على استشارة مجانية</button>
         </section>
-        <section id="why-qeen-stack" class="why-qeen" aria-labelledby="why-qeen-title" top="80px" data-v-b27626f1
-          data-v-bde5893a>
-          <div class="why-qeen__container" data-v-bde5893a>
-            <div class="why-qeen__header" data-v-bde5893a>
-              <h2 id="why-qeen-title" class="why-qeen__title" data-v-bde5893a>لماذا <span class="why-qeen__title-brand"
-                  data-v-bde5893a>OG؟</span></h2>
-              <p class="why-qeen__subtitle" data-v-bde5893a>الثقة هي البداية، والنتائج هي الدليل
-                نحن شركاء نجاح، ولسنا مجرد مقدمي خدمة.</p>
+        <section id="problem-shift" class="problem-shift problem-shift--arabic" data-v-b27626f1 data-v-ca9bb102
+          style="background-color: white;">
+          <div class="problem-shift__container" data-v-ca9bb102>
+            <div class="problem-shift__block problem-shift__block--problem" data-v-ca9bb102>
+              <h2 class="problem-shift__title" data-v-ca9bb102 style="color: #E71A24 !important;"><br data-v-ca9bb102
+                  style="color: #E71A24 !important;">
+                المشكلة</h2>
+              <p class="problem-shift__subtitle" data-v-ca9bb102><span data-v-ca9bb102>ليست في التسويق </span><span
+                  data-v-ca9bb102>بل في غياب الرؤية.</span></p>
+              <p class="problem-shift__body" data-v-ca9bb102>فوضى المحتوى، تعدد الأدوات، أفكار بدون اتجاه، إعلانات
+                تعمل بمعزل عن الـ Creative والاستراتيجية ما ترتبط بباقي رحلة العميل.
+                <br data-v-ca9bb102>والنتيجة؟
+                ميزانية تُصرف، ومجهود يُبذل، لكن النمو ما يكون بالمستوى المتوقع.
+                نحن نربط كل جزء ليعمل ضمن منظومة واحدة.
             </div>
-            <div class="why-qeen__grid why-qeen__grid--with-chips" data-v-bde5893a><!--[-->
-              <div class="why-qeen__card-wrapper" data-v-bde5893a>
-                <div id="benefit-منظومة-نجاح-مشتركة" class="mc" data-v-bde5893a data-v-74aff4f3>
-                  <div class="mc__inner" data-v-74aff4f3>
-                    <div class="mc__graphic" data-v-74aff4f3><img src="images/الاستراتيجية اولا.webp" alt=""
-                        class="mc__loop" loading="lazy" data-v-74aff4f3></div>
-                    <div class="mc__content" data-v-74aff4f3>
-                      <div class="mc__text" data-v-74aff4f3>
-                        <h3 class="mc__title" data-v-74aff4f3>الاستراتيجية أولاً<!----></h3>
-                        <p class="mc__desc" data-v-74aff4f3>نبدأ بفهم شامل لأهداف الأعمال، والسوق، والجمهور، والمنافسين،
-                          لبناء استراتيجية واضحة توجه جميع مراحل العمل.</p>
-                      </div>
-                      <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-1"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-1" data-v-74aff4f3
-                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
-                    </div>
-                  </div>
+            <div class="stage-wrapper" data-v-ca9bb102 data-v-100b91bc>
+              <div class="stage" style="--scroll-y:0px;" data-v-100b91bc>
+                <div class="bg-photo" data-v-100b91bc><img src="images/shift-section/1 (1).webp" alt="Campaign hero"
+                    draggable="false" data-v-100b91bc></div>
+                <div class="chart chart-conv chart--embedded-shell" data-v-100b91bc><img
+                    src="images/shift-section/c-rate-ar.webp" alt="Conversion Rate" draggable="false" data-v-100b91bc>
+                </div>
+                <div class="chart chart-growth chart--embedded-shell" data-v-100b91bc><img
+                    src="images/shift-section/g-rate-ar.webp" alt="Growth Rate" draggable="false" data-v-100b91bc>
+                </div>
+                <div class="chart chart-spend chart--embedded-shell" data-v-100b91bc><img
+                    src="images/shift-section/spend-ar.webp" alt="Spend vs Revenue" draggable="false" data-v-100b91bc>
+                </div>
+                <div class="chart chart-campaign chart--embedded-shell" data-v-100b91bc><img
+                    src="images/shift-section/gorwth-ar.webp" alt="Campaign Growth" draggable="false" data-v-100b91bc>
+                </div>
+                <div class="compare" style="--pos:35%;" data-v-100b91bc><img class="compare-img img-before"
+                    src="images/shift-section/قبل.webp" alt="Before — product" draggable="false" data-v-100b91bc>
+                  <div class="after-wrap" data-v-100b91bc><img class="compare-img img-after"
+                      src="images/shift-section/بعد.webp" alt="After — model wearing product" draggable="false"
+                      data-v-100b91bc></div><span class="lbl lbl-before" style="opacity:1;"
+                    data-v-100b91bc>قبل</span><span class="lbl lbl-after" style="opacity:1;" data-v-100b91bc>بعد</span>
+                  <div class="divider" aria-hidden="true" data-v-100b91bc></div>
+                  <div class="handle" role="slider" aria-label="Drag to compare before and after" aria-valuenow="35"
+                    aria-valuemin="0" aria-valuemax="100" tabindex="0" data-v-100b91bc></div>
                 </div>
               </div>
-              <div class="why-qeen__card-wrapper" data-v-bde5893a>
-                <div id="benefit-تحكم-كامل" class="mc" data-v-bde5893a data-v-74aff4f3>
-                  <div class="mc__inner" data-v-74aff4f3>
-                    <div class="mc__graphic" data-v-74aff4f3><img src="images/الإبداع المرتبط بالأهداف.webp" alt=""
-                        class="mc__loop" loading="lazy" data-v-74aff4f3></div>
-                    <div class="mc__content" data-v-74aff4f3>
-                      <div class="mc__text" data-v-74aff4f3>
-                        <h3 class="mc__title" data-v-74aff4f3>الإبداع المرتبط بالأهداف<!----></h3>
-                        <p class="mc__desc" data-v-74aff4f3>نحوّل الاستراتيجية إلى أفكار ومحتوى إبداعي يعكس هوية العلامة
-                          التجارية، ويجذب الجمهور، ويدعم الأهداف التجارية.</p>
-                      </div>
-                      <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-2"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-2" data-v-74aff4f3
-                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="why-qeen__card-wrapper" data-v-bde5893a>
-                <div id="benefit-منظومة-متكاملة-مترابطة" class="mc" data-v-bde5893a data-v-74aff4f3>
-                  <div class="mc__inner" data-v-74aff4f3>
-                    <div class="mc__graphic" data-v-74aff4f3><img src="images/منظومة متكاملة.webp" alt=""
-                        class="mc__loop" loading="lazy" data-v-74aff4f3></div>
-                    <div class="mc__content" data-v-74aff4f3>
-                      <div class="mc__text" data-v-74aff4f3>
-                        <h3 class="mc__title" data-v-74aff4f3>منظومة متكاملة<!----></h3>
-                        <p class="mc__desc" data-v-74aff4f3>نجمع بين الاستراتيجية، وبناء العلامة التجارية، وصناعة
-                          المحتوى، وإدارة المنصات، والإعلانات الرقمية ضمن رؤية موحّدة ومتكاملة.</p>
-                      </div>
-                      <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-3"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-3" data-v-74aff4f3
-                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="why-qeen__card-wrapper" data-v-bde5893a>
-                <div id="benefit-رؤية-واضحة-مدعومة-بالبيانات" class="mc" data-v-bde5893a data-v-74aff4f3>
-                  <div class="mc__inner" data-v-74aff4f3>
-                    <div class="mc__graphic" data-v-74aff4f3><img src="images/قرارات تستند إلى البيانات.webp" alt=""
-                        class="mc__loop" loading="lazy" data-v-74aff4f3></div>
-                    <div class="mc__content" data-v-74aff4f3>
-                      <div class="mc__text" data-v-74aff4f3>
-                        <h3 class="mc__title" data-v-74aff4f3>قرارات تستند إلى البيانات<!----></h3>
-                        <p class="mc__desc" data-v-74aff4f3>نحلل الأداء وسلوك الجمهور ونتائج الحملات بشكل مستمر، لنطوّر
-                          ما نقدمه ونتخذ قرارات أكثر دقة وفاعلية.</p>
-                      </div>
-                      <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-4"
-                          class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-4" data-v-74aff4f3
-                          onclick="openModal()">احصل على مراجعة مجانية</button></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            </div>
+            <style>
+              .problem-shift__title,
+              .problem-shift__content,
+              .problem-shift__text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: right !important;
+                direction: rtl !important;
+              }
+            </style>
+            <div class="problem-shift__block problem-shift__block--shift" data-v-ca9bb102>
+              <h2 class="problem-shift__title" data-v-ca9bb102 style="color: #E71A24 !important;"><br data-v-ca9bb102>
+                الحل</h2>
+              <p class="problem-shift__subtitle" data-v-ca9bb102><span data-v-ca9bb102>نحوّل التسويق من جهود متفرقة
+                  إلى منظومة متكاملة.
+                </span><span data-v-ca9bb102>في OG، نبدأ بفهم علامتك التجارية وأهدافها، ثم نربط كل مرحلة ضمن مسار
+                  واضح، من بناء الاستراتيجية إلى تنفيذ المحتوى وقياس الأداء والنتائج.</span></p>
             </div>
           </div>
         </section>
-        <section id="client-results" class="client-results" data-v-b27626f1 data-v-2e0ce7eb>
-          <div class="client-results__header" data-v-2e0ce7eb>
-            <h2 class="client-results__title" data-v-2e0ce7eb>علامات تجارية حقيقية . نتائج حقيقية</h2>
-            <p class="client-results__subtitle" data-v-2e0ce7eb>هكذا تبدو النتائج.. حينما يتحول الديجيتال ماركتنج من
-              العشوائية إلى النظام المتكامل.</p>
-          </div>
-          <div class="client-results__video-wrapper" data-v-2e0ce7eb><canvas class="client-results__canvas"
-              data-v-2e0ce7eb></canvas><video src="videos/Chaos%20into%20growth_AR.mp4" muted loop playsinline autoplay
-              preload="metadata" class="client-results__video-hidden" data-v-2e0ce7eb></video><video
-              src="videos/Chaos%20into%20growth_AR%20-mask.mp4" muted loop playsinline autoplay preload="metadata"
-              class="client-results__video-hidden" data-v-2e0ce7eb></video></div>
-          <div class="client-results__track" data-v-2e0ce7eb>
-            <div class="client-results__slider" data-v-2e0ce7eb>
-              <div class="client-results__group" data-v-2e0ce7eb><!--[-->
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/الجوكر.webp" alt="Nabataty"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Eljoker</h3>
-                    <p class="result-card__quote" data-v-b3611011>تم عمل استراتيجية متكاملة وواضحة، ربطت أهداف البراند
-                      بخطوات عملية ساعدتنا على النمو والمنافسة بقوة في السوق</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>خالد الغامدي</p>
-                      <p class="result-card__role" data-v-b3611011>المؤسس والرئيس التنفيذي</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٥١٪</span><span class="result-card__metric-label"
-                          data-v-b3611011>الزيارات</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٣٤٪</span><span class="result-card__metric-label" data-v-b3611011>تكرار
-                          الشراء</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Pochinki.webp"
-                    alt="6th street" class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Pochinki</h3>
-                    <p class="result-card__quote" data-v-b3611011>الاهتمام بتصوير منتجاتنا بشكل احترافي، ونجح في إبراز
-                      هوية البراند وتقديم المحتوى بصورة تعكس جودته بشكل واضح.</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>هيتش مالهورتا</p>
-                      <p class="result-card__role" data-v-b3611011>مدير التسويق</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٣٨٪</span><span class="result-card__metric-label" data-v-b3611011>معدل
-                          التحويل</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٢٩٪</span><span class="result-card__metric-label" data-v-b3611011>تكرار
-                          الشراء</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/MAZ.webp" alt="MAZ"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>MAZ</h3>
-                    <p class="result-card__quote" data-v-b3611011>ساعدونا على تنمية متجرنا الإلكتروني من خلال استراتيجية
-                      متكاملة جمعت
-                      بين المحتوى والإعلانات، وركزت على تحقيق نتائج فعلية وتحويل الزيارات إلى عملاء ومبيعات.»
-                    </p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>علاء خليل</p>
-                      <p class="result-card__role" data-v-b3611011>المؤسس</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>٥ X</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٤٨٪</span><span class="result-card__metric-label" data-v-b3611011>الإيرادات
-                          من الإعلانات</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Dropgear.webp" alt="Dropgear"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Dropgear</h3>
-                    <p class="result-card__quote" data-v-b3611011>توظّيف تقنيات الذكاء الاصطناعي بطريقة ذكية في تطوير
-                      الأفكار وتنفيذ المحتوى، مع الحفاظ على هوية البراند وطابعه الإبداعي
-
-                    </p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>حمد الروقيب</p>
-                      <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٤٥٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>-٦٥٪</span><span class="result-card__metric-label" data-v-b3611011>تكلفة
-                          الإبداع</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Cloud Home.webp"
-                    alt="Cloud Home" class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>Cloud Home</h3>
-                    <p class="result-card__quote" data-v-b3611011>من أول خطوة، فريق OG درس السوق والمنافسين بعمق،
-                      وساعدنا نحدد مكانة البراند والفرص الحقيقية للنمو والتميز
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>غييرمو خيمينيز</p>
-                      <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٥٣٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
-                          الإنفاق الإعلاني</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>-٣٥٪</span><span class="result-card__metric-label" data-v-b3611011>تكلفة
-                          الإضافة للسلة</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/AMS.webp" alt="AMS"
-                    class="result-card__bg" data-v-b3611011>
-                  <div class="result-card__overlay" data-v-b3611011></div>
-                  <div class="result-card__content" data-v-b3611011>
-                    <h3 class="result-card__brand" data-v-b3611011>AMS</h3>
-                    <p class="result-card__quote" data-v-b3611011>وجود الفريق في الإمارات انعكس على المحتوى بشكل واضح؛
-                      من خلال مراعاة الهوية الإماراتية وطبيعة الجمهور، وثقافة السوق المحلي في كل تفصيلة.</p>
-                    <div class="result-card__author" data-v-b3611011>
-                      <p class="result-card__name" data-v-b3611011>جوانا الصراف</p>
-                      <p class="result-card__role" data-v-b3611011>المؤسسة والرئيسة التنفيذية</p>
-                    </div>
-                    <div class="result-card__metrics" data-v-b3611011>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٣٤٪</span><span class="result-card__metric-label" data-v-b3611011>المبيعات
-                          عبر الإنترنت</span></div>
-                      <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                          data-v-b3611011>+٨٠٪</span><span class="result-card__metric-label"
-                          data-v-b3611011>التفاعل</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><button id="cta-client-results" class="client-results__cta cta client_results__cta"
-            q-gtm="cta client_results__cta cta-client-results" data-v-2e0ce7eb onclick="openModal()">احصل على مراجعة
-            مجانية</button>
-        </section>
-        <section id="plans" class="plans" data-v-b27626f1 data-v-fba517ea>
-          <div class="plans__container" data-v-fba517ea>
-            <h2 class="plans__title" data-v-fba517ea>لا نقدم خدمات منفصلة، بل نبني منظومة تسويقية متكاملة مصممة للنمو.
-            </h2>
-            <div class="plans__subtitle" data-v-fba517ea><!--[-->
-              <p class="plans__subtitle-line" data-v-fba517ea>لأننا نؤمن أن التسويق الفعّال لا يبدأ بالتنفيذ، بل يبدأ
-                بالفهم</p>
-              <p class="plans__subtitle-line" data-v-fba517ea>لذلك نجمع بين التحليل، والاستراتيجية، والإبداع، والتنفيذ،
-                والأداء ضمن منظومة واحدة.</p>
-              <p class="plans__subtitle-line" data-v-fba517ea>تعمل وفق رؤية واضحة وهدف مشترك.</p><!--]-->
-            </div>
-            <div class="plans__card" data-v-fba517ea>
-              <h3 class="plans__card-title" data-v-fba517ea>خدماتنا</h3>
-              <!-- <p class="plans__card-line" data-v-fba517ea>نموذج قائم على الأداء فقط. بدون التزامات شهرية ثابتة،</p>
-              <p class="plans__card-line" data-v-fba517ea>بل نسبة من المبيعات التي نحققها معاً.</p> -->
-              <ul class="plans__features" data-v-fba517ea><!--[-->
-                <li data-v-fba517ea>نحلل السوق والمنافسين وسلوك الجمهور لنحدد الفرص، ونبني قرارات تسويقية تمنح علامتك
-                  ميزة تنافسية واضحة.</li>
-                <li data-v-fba517ea>نحوّل أهداف علامتك إلى استراتيجية واضحة وخطة تسويقية متكاملة تحدد الاتجاه،
-                  الأولويات، والقنوات المناسبة للنمو.</li>
-                <li data-v-fba517ea>نطوّر محتوى إبداعيًا مبنيًا على فهم جمهورك، يعكس هوية علامتك ويوصل رسالتها بطريقة
-                  تجذب الانتباه وتحقق هدفًا واضحًا.</li>
-                <li data-v-fba517ea>نحوّل الأفكار والاستراتيجيات إلى محتوى بصري احترافي من خلال تصوير وإنتاج مصمم ليعكس
-                  قيمة علامتك ويترك أثرًا واضحًا.</li>
-                <li data-v-fba517ea>نبني هوية متماسكة تمنح علامتك حضورًا مميزًا، وتخلق تجربة واضحة ومتسقة في كل نقطة
-                  تواصل مع جمهورك.</li>
-                <li data-v-fba517ea>نحوّل رسائل علامتك وأفكارها إلى قصص إبداعية سلسة تساعد الجمهور على الفهم، التفاعل،
-                  وتذكّر العلامة.</li>
-                <li data-v-fba517ea>نحوّل خبرتك وشخصيتك إلى محتوى استراتيجي يبني حضورك الشخصي، ويعزز الثقة ويمنح علامتك
-                  صوتًا أكثر تأثيرًا.</li>
-                <li data-v-fba517ea>نخطط وندير حملاتك الإعلانية بناءً على البيانات، مع اختبار وتحسين مستمر لضمان توظيف
-                  الميزانية بالشكل الأكثر كفاءة وتحقيق نتائج قابلة للقياس.</li><!--]-->
-              </ul>
-            </div><button id="cta-our_plans-1" class="plans__cta cta our_plans__cta"
-              q-gtm="cta our_plans__cta cta-our_plans-1" data-v-fba517ea onclick="openModal()">احصل على مراجعة
-              مجانية</button>
-          </div>
-        </section>
-        <section class="cta-section" id="" data-v-b27626f1 data-v-2d40b38e>
-          <div class="cta-section__video-wrapper" data-v-2d40b38e><canvas class="cta-section__canvas"
-              data-v-2d40b38e></canvas><video src="videos/CTA%20Section_AR.mp4" muted loop playsinline autoplay
-              preload="auto" class="cta-section__video-hidden" data-v-2d40b38e></video><video
-              src="videos/CTA%20Section_AR%20-%20Mask.mp4" muted loop playsinline autoplay preload="auto"
-              class="cta-section__video-hidden" data-v-2d40b38e></video></div>
-          <div class="cta-section__content" data-v-2d40b38e><button id="cta-contact-book-demo"
-              class="cta-section__btn cta contact__cta" q-gtm="cta contact__cta cta-contact-book-demo" data-v-2d40b38e
-              onclick="openModal()">احصل على مراجعة مجانية</button></div>
-        </section><!--]--><!--]-->
-      </main>
-      <footer class="layout__footer" data-v-0353b646>
-        <div class="footer__content" data-v-0353b646>
-          <div class="footer__logo" data-v-0353b646><img src="images/LOGO ICON SIZE W.webp" alt="Qeen Logo"
-              data-v-0353b646>
-          </div>
-          <div class="footer__social" data-v-0353b646>
-            <a href="https://www.instagram.com/qeen.ai/" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram" data-v-0353b646><img src="Instagram-icon.svg" alt="Instagram" width="32"
-                height="32" data-v-0353b646></a>
-          </div>
-          <p class="footer__copyright" data-v-0353b646>© 2026 OG. جميع الحقوق محفوظة</p>
-        </div>
-      </footer><!---->
     </div>
+    <section id="how-it-works" class="system" data-v-b27626f1 data-v-67409985><img src="images/system/gear-small.svg"
+        alt="" class="system__gear system__gear--large" style="transform:rotate(0deg);" data-v-67409985><img
+        src="images/system/gear-large.svg" alt="" class="system__gear system__gear--small"
+        style="transform:rotate(0deg);" data-v-67409985>
+      <div class="system__header" data-v-67409985>
+        <p class="system__subtitle" data-v-67409985>منظومة متكاملة</p>
+        <h2 class="system__title" data-v-67409985>لبناء حضور علامتك ونموها </h2>
+      </div>
+      <div class="system__track" data-v-67409985>
+        <div class="system__slider" data-v-67409985>
+          <div class="system__group" data-v-67409985><!--[-->
+            <div class="system__card" data-v-67409985><img src="images/system/system-section3.svg"
+                alt="تحليل عميق لعلامتك التجارية وأهدافك" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985> نبني استراتيجية واضحة تحدد اتجاه علامتك وأهدافها.
+              </p>
+            </div>
+            <div class="system__card" data-v-67409985><img src="images/system/system-section4.svg"
+                alt="تخطيط استراتيجي لضمان النتائج" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985> نصنع محتوى هادف يعكس هوية علامتك ويخاطب جمهورك.</p>
+            </div>
+            <div class="system__card" data-v-67409985><img src="images/system/system-section5.svg"
+                alt="إدارة شاملة تضمن تناغم الكرييتفز مع الأداء" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985> نحوّل الأفكار إلى محتوى احترافي يحقق مؤشرات الأداء.
+              </p>
+            </div>
+            <div class="system__card" data-v-67409985><img src="images/system/system-section2.svg"
+                alt="تطوير استباقي مستمر يعالج الثغرات قبل حدوثها" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985> نبني حضورًا شخصيًا مؤثرًا عبر البودكاست.
+              </p>
+            </div>
+            <div class="system__card" data-v-67409985><img src="images/system/system-section1.svg"
+                alt="استراتيجية نمو تضاعف نجاحك باستمرار" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985>نقرأ السوق الإماراتي ونحلل المنافسين لتحديد الفرص</p>
+            </div><!--]-->
+          </div>
+          <div class="system__group" aria-hidden="true" data-v-67409985><!--[-->
+            <div class="system__card" data-v-67409985><img src="images/system/system-section3.svg"
+                alt="تحليل عميق لعلامتك التجارية وأهدافك" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985> نحوّل رسالتك إلى قصة تصل للجمهور وتبقى في ذاكرته.
+              </p>
+            </div>
+            <div class="system__card" data-v-67409985><img src="images/system/system-section4.svg"
+                alt="تخطيط استراتيجي لضمان النتائج" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985> نوظف الذكاء الاصطناعي لتوسيع إمكانيات المحتوى والإنتاج.
+              </p>
+            </div>
+            <div class="system__card" data-v-67409985><img src="images/system/system-section5.svg"
+                alt="إدارة شاملة تضمن تناغم الكرييتفز مع الأداء" class="system__card-icon" data-v-67409985>
+              <p class="system__card-text" data-v-67409985> نوظف المحتوى والإبداع لتحقيق أهداف تسويقية قابلة للقياس.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div><button id="cta-system" class="system__cta cta" q-gtm="cta system__cta cta-system" data-v-67409985
+        onclick="openModal()">احصل
+        على استشارة مجانية</button>
+    </section>
+    <section id="why-qeen-stack" class="why-qeen" aria-labelledby="why-qeen-title" top="80px" data-v-b27626f1
+      data-v-bde5893a>
+      <div class="why-qeen__container" data-v-bde5893a>
+        <div class="why-qeen__header" data-v-bde5893a>
+          <h2 id="why-qeen-title" class="why-qeen__title" data-v-bde5893a>لماذا <span class="why-qeen__title-brand"
+              data-v-bde5893a>OG؟</span></h2>
+          <p class="why-qeen__subtitle" data-v-bde5893a>الثقة هي البداية، والنتائج هي الدليل
+            نحن شركاء نجاح، ولسنا مجرد مقدمي خدمة.</p>
+        </div>
+        <div class="why-qeen__grid why-qeen__grid--with-chips" data-v-bde5893a><!--[-->
+          <div class="why-qeen__card-wrapper" data-v-bde5893a>
+            <div id="benefit-منظومة-نجاح-مشتركة" class="mc" data-v-bde5893a data-v-74aff4f3>
+              <div class="mc__inner" data-v-74aff4f3>
+                <div class="mc__graphic" data-v-74aff4f3><img src="images/الاستراتيجية اولا.webp" alt=""
+                    class="mc__loop" loading="lazy" data-v-74aff4f3></div>
+                <div class="mc__content" data-v-74aff4f3>
+                  <div class="mc__text" data-v-74aff4f3>
+                    <h3 class="mc__title" data-v-74aff4f3>الاستراتيجية أولاً<!----></h3>
+                    <p class="mc__desc" data-v-74aff4f3>نبدأ بفهم شامل لأهداف الأعمال، والسوق، والجمهور، والمنافسين،
+                      لبناء استراتيجية واضحة توجه جميع مراحل العمل.</p>
+                  </div>
+                  <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-1"
+                      class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-1" data-v-74aff4f3
+                      onclick="openModal()">احصل على مراجعة مجانية</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-qeen__card-wrapper" data-v-bde5893a>
+            <div id="benefit-تحكم-كامل" class="mc" data-v-bde5893a data-v-74aff4f3>
+              <div class="mc__inner" data-v-74aff4f3>
+                <div class="mc__graphic" data-v-74aff4f3><img src="images/الإبداع المرتبط بالأهداف.webp" alt=""
+                    class="mc__loop" loading="lazy" data-v-74aff4f3></div>
+                <div class="mc__content" data-v-74aff4f3>
+                  <div class="mc__text" data-v-74aff4f3>
+                    <h3 class="mc__title" data-v-74aff4f3>الإبداع المرتبط بالأهداف<!----></h3>
+                    <p class="mc__desc" data-v-74aff4f3>نحوّل الاستراتيجية إلى أفكار ومحتوى إبداعي يعكس هوية العلامة
+                      التجارية، ويجذب الجمهور، ويدعم الأهداف التجارية.</p>
+                  </div>
+                  <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-2"
+                      class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-2" data-v-74aff4f3
+                      onclick="openModal()">احصل على مراجعة مجانية</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-qeen__card-wrapper" data-v-bde5893a>
+            <div id="benefit-منظومة-متكاملة-مترابطة" class="mc" data-v-bde5893a data-v-74aff4f3>
+              <div class="mc__inner" data-v-74aff4f3>
+                <div class="mc__graphic" data-v-74aff4f3><img src="images/منظومة متكاملة.webp" alt="" class="mc__loop"
+                    loading="lazy" data-v-74aff4f3></div>
+                <div class="mc__content" data-v-74aff4f3>
+                  <div class="mc__text" data-v-74aff4f3>
+                    <h3 class="mc__title" data-v-74aff4f3>منظومة متكاملة<!----></h3>
+                    <p class="mc__desc" data-v-74aff4f3>نجمع بين الاستراتيجية، وبناء العلامة التجارية، وصناعة
+                      المحتوى، وإدارة المنصات، والإعلانات الرقمية ضمن رؤية موحّدة ومتكاملة.</p>
+                  </div>
+                  <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-3"
+                      class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-3" data-v-74aff4f3
+                      onclick="openModal()">احصل على مراجعة مجانية</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-qeen__card-wrapper" data-v-bde5893a>
+            <div id="benefit-رؤية-واضحة-مدعومة-بالبيانات" class="mc" data-v-bde5893a data-v-74aff4f3>
+              <div class="mc__inner" data-v-74aff4f3>
+                <div class="mc__graphic" data-v-74aff4f3><img src="images/قرارات تستند إلى البيانات.webp" alt=""
+                    class="mc__loop" loading="lazy" data-v-74aff4f3></div>
+                <div class="mc__content" data-v-74aff4f3>
+                  <div class="mc__text" data-v-74aff4f3>
+                    <h3 class="mc__title" data-v-74aff4f3>قرارات تستند إلى البيانات<!----></h3>
+                    <p class="mc__desc" data-v-74aff4f3>نحلل الأداء وسلوك الجمهور ونتائج الحملات بشكل مستمر، لنطوّر
+                      ما نقدمه ونتخذ قرارات أكثر دقة وفاعلية.</p>
+                  </div>
+                  <div class="mc__cta-wrapper" data-v-74aff4f3><button id="cta-why_qeen-4"
+                      class="mc__cta cta why_qeen__cta" q-gtm="cta why_qeen__cta cta-why_qeen-4" data-v-74aff4f3
+                      onclick="openModal()">احصل على مراجعة مجانية</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <style>
+      .client-results h2[data-v-2e0ce7eb] {
+        color: #000 !important;
+      }
+
+      #client-results .client-results__title,
+      #client-results .client-results__subtitle {
+        color: #000 !important;
+      }
+    </style>
+    <section id="client-results" class="client-results" data-v-b27626f1 data-v-2e0ce7eb
+      style="background-color: white;">
+      <div class="client-results__header" data-v-2e0ce7eb>
+        <h2 class="client-results__title" data-v-2e0ce7eb>علامات تجارية حقيقية . نتائج حقيقية</h2>
+        <p class="client-results__subtitle" data-v-2e0ce7eb>هكذا تبدو النتائج.. حينما يتحول الديجيتال ماركتنج من
+          العشوائية إلى النظام المتكامل.</p>
+      </div>
+      <div class="client-results__video-wrapper" data-v-2e0ce7eb><canvas class="client-results__canvas"
+          data-v-2e0ce7eb></canvas><video src="videos/Chaos%20into%20growth_AR.mp4" muted loop playsinline autoplay
+          preload="metadata" class="client-results__video-hidden" data-v-2e0ce7eb></video><video
+          src="videos/Chaos%20into%20growth_AR%20-mask.mp4" muted loop playsinline autoplay preload="metadata"
+          class="client-results__video-hidden" data-v-2e0ce7eb></video></div>
+      <div class="client-results__track" data-v-2e0ce7eb>
+        <div class="client-results__slider" data-v-2e0ce7eb>
+          <div class="client-results__group" data-v-2e0ce7eb><!--[-->
+            <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/الجوكر.webp" alt="Nabataty"
+                class="result-card__bg" data-v-b3611011>
+              <div class="result-card__overlay" data-v-b3611011></div>
+              <div class="result-card__content" data-v-b3611011>
+                <h3 class="result-card__brand" data-v-b3611011>Eljoker</h3>
+                <p class="result-card__quote" data-v-b3611011>تم عمل استراتيجية متكاملة وواضحة، ربطت أهداف البراند
+                  بخطوات عملية ساعدتنا على النمو والمنافسة بقوة في السوق</p>
+                <div class="result-card__author" data-v-b3611011>
+                  <p class="result-card__name" data-v-b3611011>خالد الغامدي</p>
+                  <p class="result-card__role" data-v-b3611011>المؤسس والرئيس التنفيذي</p>
+                </div>
+                <div class="result-card__metrics" data-v-b3611011>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٥١٪</span><span class="result-card__metric-label" data-v-b3611011>الزيارات</span>
+                  </div>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٣٤٪</span><span class="result-card__metric-label" data-v-b3611011>تكرار
+                      الشراء</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Pochinki.webp" alt="6th street"
+                class="result-card__bg" data-v-b3611011>
+              <div class="result-card__overlay" data-v-b3611011></div>
+              <div class="result-card__content" data-v-b3611011>
+                <h3 class="result-card__brand" data-v-b3611011>Pochinki</h3>
+                <p class="result-card__quote" data-v-b3611011>الاهتمام بتصوير منتجاتنا بشكل احترافي، ونجح في إبراز
+                  هوية البراند وتقديم المحتوى بصورة تعكس جودته بشكل واضح.</p>
+                <div class="result-card__author" data-v-b3611011>
+                  <p class="result-card__name" data-v-b3611011>هيتش مالهورتا</p>
+                  <p class="result-card__role" data-v-b3611011>مدير التسويق</p>
+                </div>
+                <div class="result-card__metrics" data-v-b3611011>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٣٨٪</span><span class="result-card__metric-label" data-v-b3611011>معدل
+                      التحويل</span></div>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٢٩٪</span><span class="result-card__metric-label" data-v-b3611011>تكرار
+                      الشراء</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/MAZ.webp" alt="MAZ"
+                class="result-card__bg" data-v-b3611011>
+              <div class="result-card__overlay" data-v-b3611011></div>
+              <div class="result-card__content" data-v-b3611011>
+                <h3 class="result-card__brand" data-v-b3611011>MAZ</h3>
+                <p class="result-card__quote" data-v-b3611011>ساعدونا على تنمية متجرنا الإلكتروني من خلال استراتيجية
+                  متكاملة جمعت
+                  بين المحتوى والإعلانات، وركزت على تحقيق نتائج فعلية وتحويل الزيارات إلى عملاء ومبيعات.»
+                </p>
+                <div class="result-card__author" data-v-b3611011>
+                  <p class="result-card__name" data-v-b3611011>علاء خليل</p>
+                  <p class="result-card__role" data-v-b3611011>المؤسس</p>
+                </div>
+                <div class="result-card__metrics" data-v-b3611011>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>٥ X</span><span class="result-card__metric-label" data-v-b3611011>العائد على
+                      الإنفاق الإعلاني</span></div>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٤٨٪</span><span class="result-card__metric-label" data-v-b3611011>الإيرادات
+                      من الإعلانات</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Dropgear.webp" alt="Dropgear"
+                class="result-card__bg" data-v-b3611011>
+              <div class="result-card__overlay" data-v-b3611011></div>
+              <div class="result-card__content" data-v-b3611011>
+                <h3 class="result-card__brand" data-v-b3611011>Dropgear</h3>
+                <p class="result-card__quote" data-v-b3611011>توظّيف تقنيات الذكاء الاصطناعي بطريقة ذكية في تطوير
+                  الأفكار وتنفيذ المحتوى، مع الحفاظ على هوية البراند وطابعه الإبداعي
+
+                </p>
+                <div class="result-card__author" data-v-b3611011>
+                  <p class="result-card__name" data-v-b3611011>حمد الروقيب</p>
+                  <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
+                </div>
+                <div class="result-card__metrics" data-v-b3611011>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٤٥٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
+                      الإنفاق الإعلاني</span></div>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>-٦٥٪</span><span class="result-card__metric-label" data-v-b3611011>تكلفة
+                      الإبداع</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/Cloud Home.webp" alt="Cloud Home"
+                class="result-card__bg" data-v-b3611011>
+              <div class="result-card__overlay" data-v-b3611011></div>
+              <div class="result-card__content" data-v-b3611011>
+                <h3 class="result-card__brand" data-v-b3611011>Cloud Home</h3>
+                <p class="result-card__quote" data-v-b3611011>من أول خطوة، فريق OG درس السوق والمنافسين بعمق،
+                  وساعدنا نحدد مكانة البراند والفرص الحقيقية للنمو والتميز
+                <div class="result-card__author" data-v-b3611011>
+                  <p class="result-card__name" data-v-b3611011>غييرمو خيمينيز</p>
+                  <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
+                </div>
+                <div class="result-card__metrics" data-v-b3611011>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٥٣٪</span><span class="result-card__metric-label" data-v-b3611011>العائد على
+                      الإنفاق الإعلاني</span></div>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>-٣٥٪</span><span class="result-card__metric-label" data-v-b3611011>تكلفة
+                      الإضافة للسلة</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="result-card" data-v-2e0ce7eb data-v-b3611011><img src="images/AMS.webp" alt="AMS"
+                class="result-card__bg" data-v-b3611011>
+              <div class="result-card__overlay" data-v-b3611011></div>
+              <div class="result-card__content" data-v-b3611011 style="color: white !important;">
+                <h3 class="result-card__brand" data-v-b3611011 style="color: white !important;">AMS</h3>
+                <p class="result-card__quote" data-v-b3611011 style="color: white;">وجود الفريق في الإمارات انعكس على
+                  المحتوى بشكل واضح؛
+                  من خلال مراعاة الهوية الإماراتية وطبيعة الجمهور، وثقافة السوق المحلي في كل تفصيلة.</p>
+                <div class="result-card__author" data-v-b3611011>
+                  <p class="result-card__name" data-v-b3611011 style="color: white;">جوانا الصراف</p>
+                  <p class="result-card__role" data-v-b3611011 style="color: white;">المؤسسة والرئيسة التنفيذية</p>
+                </div>
+                <div class="result-card__metrics" data-v-b3611011>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٣٤٪</span><span class="result-card__metric-label" data-v-b3611011>المبيعات
+                      عبر الإنترنت</span></div>
+                  <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
+                      data-v-b3611011>+٨٠٪</span><span class="result-card__metric-label" data-v-b3611011>التفاعل</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><button id="cta-client-results" class="client-results__cta cta client_results__cta"
+        q-gtm="cta client_results__cta cta-client-results" data-v-2e0ce7eb onclick="openModal()">احصل على مراجعة
+        مجانية</button>
+    </section>
+    <section id="plans" class="plans" data-v-b27626f1 data-v-fba517ea>
+      <div class="plans__container" data-v-fba517ea>
+        <h2 class="plans__title" data-v-fba517ea>لا نقدم خدمات منفصلة، بل نبني منظومة تسويقية متكاملة مصممة للنمو.
+        </h2>
+        <div class="plans__subtitle" data-v-fba517ea><!--[-->
+          <p class="plans__subtitle-line" data-v-fba517ea>لأننا نؤمن أن التسويق الفعّال لا يبدأ بالتنفيذ، بل يبدأ
+            بالفهم</p>
+          <p class="plans__subtitle-line" data-v-fba517ea>لذلك نجمع بين التحليل، والاستراتيجية، والإبداع، والتنفيذ،
+            والأداء ضمن منظومة واحدة.</p>
+          <p class="plans__subtitle-line" data-v-fba517ea>تعمل وفق رؤية واضحة وهدف مشترك.</p><!--]-->
+        </div>
+        <div class="plans__card" data-v-fba517ea>
+          <h3 class="plans__card-title" data-v-fba517ea>خدماتنا</h3>
+          <!-- <p class="plans__card-line" data-v-fba517ea>نموذج قائم على الأداء فقط. بدون التزامات شهرية ثابتة،</p>
+              <p class="plans__card-line" data-v-fba517ea>بل نسبة من المبيعات التي نحققها معاً.</p> -->
+          <ul class="plans__features" data-v-fba517ea><!--[-->
+            <li data-v-fba517ea>نحلل السوق والمنافسين وسلوك الجمهور لنحدد الفرص، ونبني قرارات تسويقية تمنح علامتك
+              ميزة تنافسية واضحة.</li>
+            <li data-v-fba517ea>نحوّل أهداف علامتك إلى استراتيجية واضحة وخطة تسويقية متكاملة تحدد الاتجاه،
+              الأولويات، والقنوات المناسبة للنمو.</li>
+            <li data-v-fba517ea>نطوّر محتوى إبداعيًا مبنيًا على فهم جمهورك، يعكس هوية علامتك ويوصل رسالتها بطريقة
+              تجذب الانتباه وتحقق هدفًا واضحًا.</li>
+            <li data-v-fba517ea>نحوّل الأفكار والاستراتيجيات إلى محتوى بصري احترافي من خلال تصوير وإنتاج مصمم ليعكس
+              قيمة علامتك ويترك أثرًا واضحًا.</li>
+            <li data-v-fba517ea>نبني هوية متماسكة تمنح علامتك حضورًا مميزًا، وتخلق تجربة واضحة ومتسقة في كل نقطة
+              تواصل مع جمهورك.</li>
+            <li data-v-fba517ea>نحوّل رسائل علامتك وأفكارها إلى قصص إبداعية سلسة تساعد الجمهور على الفهم، التفاعل،
+              وتذكّر العلامة.</li>
+            <li data-v-fba517ea>نحوّل خبرتك وشخصيتك إلى محتوى استراتيجي يبني حضورك الشخصي، ويعزز الثقة ويمنح علامتك
+              صوتًا أكثر تأثيرًا.</li>
+            <li data-v-fba517ea>نخطط وندير حملاتك الإعلانية بناءً على البيانات، مع اختبار وتحسين مستمر لضمان توظيف
+              الميزانية بالشكل الأكثر كفاءة وتحقيق نتائج قابلة للقياس.</li><!--]-->
+          </ul>
+        </div><button id="cta-our_plans-1" class="plans__cta cta our_plans__cta"
+          q-gtm="cta our_plans__cta cta-our_plans-1" data-v-fba517ea onclick="openModal()">احصل على مراجعة
+          مجانية</button>
+      </div>
+    </section>
+    <section class="cta-section" id="" data-v-b27626f1 data-v-2d40b38e>
+      <div class="cta-section__video-wrapper" data-v-2d40b38e><canvas class="cta-section__canvas"
+          data-v-2d40b38e></canvas><video src="videos/CTA%20Section_AR.mp4" muted loop playsinline autoplay
+          preload="auto" class="cta-section__video-hidden" data-v-2d40b38e></video><video
+          src="videos/CTA%20Section_AR%20-%20Mask.mp4" muted loop playsinline autoplay preload="auto"
+          class="cta-section__video-hidden" data-v-2d40b38e></video></div>
+      <div class="cta-section__content" data-v-2d40b38e><button id="cta-contact-book-demo"
+          class="cta-section__btn cta contact__cta" q-gtm="cta contact__cta cta-contact-book-demo" data-v-2d40b38e
+          onclick="openModal()">احصل على مراجعة مجانية</button></div>
+    </section><!--]--><!--]-->
+    </main>
+    <footer class="layout__footer" data-v-0353b646>
+      <div class="footer__content" data-v-0353b646>
+        <div class="footer__logo" data-v-0353b646><img src="images/LOGO ICON SIZE W.webp" alt="Qeen Logo"
+            data-v-0353b646>
+        </div>
+        <div class="footer__social" data-v-0353b646>
+          <a href="https://www.instagram.com/qeen.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            data-v-0353b646><img src="Instagram-icon.svg" alt="Instagram" width="32" height="32" data-v-0353b646></a>
+        </div>
+        <p class="footer__copyright" data-v-0353b646>© 2026 OG. جميع الحقوق محفوظة</p>
+      </div>
+    </footer><!---->
+  </div>
   </div>
   <div id="teleports"></div>
   <script>window.__NUXT__ = (function (a, b, c, d, e) { return { data: {}, state: { "$si18n:cached-locale-configs": {}, "$si18n:resolved-locale": d }, once: new Set([]), _errors: {}, serverRendered: c, path: "\u002Far", config: { public: { gtmId: a, optimizeImages: c, lazyLoading: c, i18n: { baseUrl: a, defaultLocale: e, rootRedirect: a, redirectStatusCode: 302, skipSettingLocaleOnNavigate: b, locales: [{ code: e, label: "EN", iso: e, name: "English", language: a }, { code: d, label: "ع", iso: d, name: "العربيّة", dir: "rtl", language: a }], detectBrowserLanguage: { alwaysRedirect: b, cookieCrossOrigin: b, cookieDomain: a, cookieKey: "django_language", cookieSecure: b, fallbackLocale: a, redirectOn: "root", useCookie: c }, experimental: { localeDetector: a, typedPages: c, typedOptionsAndMessages: b, alternateLinkCanonicalQueries: c, devCache: b, cacheLifetime: a, stripMessagesPayload: b, preload: b, strictSeo: b, nitroContextDetection: c }, domainLocales: { en: { domain: a }, ar: { domain: a } } } }, app: { baseURL: "\u002F", buildId: "cd75779d-2cf2-4395-b726-d81178e16f75", buildAssetsDir: "\u002F_nuxt\u002F", cdnURL: a } } } }("", false, true, "ar", "en"))</script>
