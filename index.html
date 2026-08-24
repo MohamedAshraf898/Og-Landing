@@ -15,6 +15,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <div id="contactModal"
     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999;">
 
@@ -151,6 +155,21 @@
   </script>
   <style>
     /* Critical CSS - inlined for performance */
+    html,
+    body,
+    body *,
+    button,
+    input,
+    textarea,
+    select {
+      font-family: "Poppins", "Beiruti", Arial, sans-serif !important;
+    }
+
+    [dir="rtl"],
+    [dir="rtl"] * {
+      font-family: "Beiruti", Arial, sans-serif !important;
+    }
+
     html {
       font-family: 'Grift', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       -webkit-text-size-adjust: 100%;
@@ -685,7 +704,7 @@
 
       .nav__mobile-content[data-v-0353b646] {
         align-items: center;
-        background: transparent;
+        background: white;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -2625,7 +2644,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 100vh;
+      min-height: 80vh;
       overflow: hidden;
       padding: 80px 0 60px;
       position: relative
@@ -2757,11 +2776,12 @@
     }
 
     .system__cta[data-v-67409985] {
+      min-width: max-content;
       align-items: center;
       background-color: #E71A24;
       border: none;
       border-radius: 18px;
-      color: #111111;
+      color: #fff !important;
       cursor: pointer;
       display: inline-flex;
       font-family: inherit;
@@ -2770,7 +2790,7 @@
       height: 36px;
       justify-content: center;
       letter-spacing: .02em;
-      padding: 0 28px;
+      padding: 0 28px !important;
       position: relative;
       text-transform: uppercase;
       transition: transform .2s ease, opacity .2s ease;
@@ -2850,7 +2870,7 @@
         font-size: 16px;
         height: 42px;
         min-width: 157px;
-        padding: 0 32px
+        padding: 0 32px !important;
       }
     }
 
@@ -3204,11 +3224,12 @@
     }
 
     .mc__desc[data-v-74aff4f3] {
+
       text-align: right;
 
       font-family: inherit;
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 18px;
+      line-height: 30px !important;
       margin: 0
     }
 
@@ -3217,11 +3238,12 @@
     }
 
     .mc__cta[data-v-74aff4f3] {
+      min-width: max-content;
       align-items: center;
       background: #E71A24;
       border: none;
       border-radius: 18px;
-      color: #111111;
+      color: #fff !important;
       cursor: pointer;
       display: inline-flex;
       font-family: inherit;
@@ -3229,7 +3251,7 @@
       font-weight: 500;
       height: 36px;
       justify-content: center;
-      padding: 0 28px;
+      padding: 0 28px !important;
       text-transform: uppercase;
       transition: transform .12s ease, opacity .12s ease
     }
@@ -3289,7 +3311,7 @@
 
       .mc__desc[data-v-74aff4f3] {
         font-family: Grift, sans-serif;
-        font-size: 12px;
+        font-size: 18px;
         font-weight: 400;
         letter-spacing: 0;
         line-height: 15px;
@@ -3412,7 +3434,7 @@
 
       .mc__desc[data-v-74aff4f3] {
         font-family: Grift, sans-serif;
-        font-size: 12px
+        font-size: 18px
       }
 
       .mc__cta[data-v-74aff4f3] {
@@ -3601,6 +3623,7 @@
     }
 
     .client-results__cta[data-v-2e0ce7eb] {
+      min-width: max-content;
       align-items: center;
       background-color: #E71A24;
       border: none;
@@ -3614,7 +3637,7 @@
       height: 36px;
       justify-content: center;
       letter-spacing: .02em;
-      padding: 0 28px;
+      padding: 0 28px !important;
       text-transform: uppercase;
       transition: transform .2s ease, opacity .2s ease;
       white-space: nowrap
@@ -4001,6 +4024,7 @@
     }
 
     .plans__card[data-v-fba517ea] {
+      direction: rtl;
       background: #ffffff36;
       border-radius: 12px;
       margin-bottom: 40px;
@@ -4068,18 +4092,17 @@
       color: #111111;
       content: "•";
       font-size: 16px;
-      left: 0;
-      line-height: 1.5;
-      position: absolute;
-      top: 0
+      left: auto !important;
+      right: 0 !important;
     }
 
     .plans__cta[data-v-fba517ea] {
+      max-width: max-content !important;
       align-items: center;
-      background-color: #111111;
+      background-color: black;
       border: none;
       border-radius: 18px;
-      color: #E71A24;
+      color: #fff !important;
       cursor: pointer;
       display: inline-flex;
       font-family: inherit;
@@ -4088,7 +4111,7 @@
       height: 36px;
       justify-content: center;
       letter-spacing: .02em;
-      padding: 0 28px;
+      padding: 0 28px !important;
       text-transform: uppercase;
       transition: transform .2s ease, opacity .2s ease;
       white-space: nowrap
@@ -4279,10 +4302,11 @@
     }
 
     .cta-section__btn[data-v-2d40b38e] {
+      max-width: max-content !important;
       background-color: #E71A24;
       border: none;
       border-radius: 18px;
-      color: #111111;
+      color: #fff !important;
       cursor: pointer;
       display: inline-flex;
       font-family: inherit;
@@ -4290,7 +4314,7 @@
       font-weight: 500;
       height: 36px;
       letter-spacing: .02em;
-      padding: 0 28px;
+      padding: 0 28px !important;
       text-transform: uppercase;
       transition: transform .2s ease, opacity .2s ease;
       white-space: nowrap
