@@ -3585,7 +3585,8 @@
       font-size: 20px;
       font-weight: 400;
       line-height: 1.4;
-      margin: 0
+      margin: 0;
+      margin-bottom: 10px;
     }
 
     .client-results__track[data-v-2e0ce7eb] {
@@ -5340,6 +5341,24 @@
       #client-results .client-results__subtitle {
         color: #000 !important;
       }
+
+      .client-results__canvas {
+        display: none !important;
+      }
+
+      .client-results__video-hidden {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 1 !important;
+        object-fit: contain;
+      }
+
+      /* إخفاء الفيديو الثاني */
+      .client-results__video-hidden:nth-of-type(2) {
+        display: none !important;
+      }
     </style>
     <section id="client-results" class="client-results" data-v-b27626f1 data-v-2e0ce7eb
       style="background-color: white;">
@@ -5348,11 +5367,10 @@
         <p class="client-results__subtitle" data-v-2e0ce7eb>هكذا تبدو النتائج.. حينما يتحول الديجيتال ماركتنج من
           العشوائية إلى النظام المتكامل.</p>
       </div>
-      <div class="client-results__video-wrapper" data-v-2e0ce7eb><canvas class="client-results__canvas"
-          data-v-2e0ce7eb></canvas><video src="videos/Chaos into growth_AR.mp4" muted loop playsinline autoplay
-          preload="metadata" class="client-results__video-hidden" data-v-2e0ce7eb></video><video
-          src="videos/Chaos%20into%20growth_AR%20-mask.mp4" muted loop playsinline autoplay preload="metadata"
-          class="client-results__video-hidden" data-v-2e0ce7eb></video></div>
+      <div class="client-results__video-wrapper">
+        <video src="videos/Chaos%20into%20growth_AR.mp4" muted loop playsinline autoplay preload="auto">
+        </video>
+      </div>
       <div class="client-results__track" data-v-2e0ce7eb>
         <div class="client-results__slider" data-v-2e0ce7eb>
           <div class="client-results__group" data-v-2e0ce7eb><!--[-->
@@ -5533,10 +5551,10 @@
     </section>
     <section class="cta-section" id="" data-v-b27626f1 data-v-2d40b38e>
       <div class="cta-section__video-wrapper" data-v-2d40b38e><canvas class="cta-section__canvas"
-          data-v-2d40b38e></canvas><video src="videos/CTA%20Section_AR.mp4" muted loop playsinline autoplay
-          preload="auto" class="cta-section__video-hidden" data-v-2d40b38e></video><video
-          src="videos/CTA%20Section_AR%20-%20Mask.mp4" muted loop playsinline autoplay preload="auto"
-          class="cta-section__video-hidden" data-v-2d40b38e></video></div>
+          data-v-2d40b38e></canvas><video src="videos/hf_20260825_162822_dbe30497-de7a-4736-be41-cc0f304dc025.mp4" muted
+          loop playsinline autoplay preload="auto" class="cta-section__video-hidden" data-v-2d40b38e></video><video
+          src="videos/hf_20260825_162822_dbe30497-de7a-4736-be41-cc0f304dc025.mp4" muted loop playsinline autoplay
+          preload="auto" class="cta-section__video-hidden" data-v-2d40b38e></video></div>
       <div class="cta-section__content" data-v-2d40b38e><button id="cta-contact-book-demo"
           class="cta-section__btn cta contact__cta" q-gtm="cta contact__cta cta-contact-book-demo" data-v-2d40b38e
           onclick="openModal()">احصل على مراجعة مجانية</button></div>
