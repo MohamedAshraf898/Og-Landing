@@ -19,17 +19,247 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <style>
-    .lead-modal{display:none;position:fixed;inset:0;z-index:10000;padding:24px;overflow-y:auto;background:rgba(0,0,0,.74);backdrop-filter:blur(8px)}
-    .lead-card{position:relative;width:min(100%,590px);margin:28px auto;padding:36px;box-sizing:border-box;background:#fff;border:1px solid #e3e3e3;border-radius:24px;box-shadow:0 28px 80px rgba(0,0,0,.28)}
-    .lead-close{position:absolute;top:18px;left:18px;width:38px;height:38px;border:0;border-radius:50%;color:#111;background:#f4f4f4;font-size:24px;line-height:1;cursor:pointer;transition:.2s ease}
-    .lead-close:hover{color:#fff!important;background:#df1f2d;transform:rotate(8deg)}
-    .lead-eyebrow{margin:0 0 7px;color:#df1f2d;font-size:14px;font-weight:700}.lead-title{margin:0;color:#111;font-size:clamp(27px,4vw,36px);line-height:1.25}.lead-intro{margin:9px 0 25px;color:#555;font-size:15px;line-height:1.7}
-    .lead-form{display:grid;grid-template-columns:1fr 1fr;gap:17px}.lead-field{display:flex;flex-direction:column;gap:7px}.lead-full{grid-column:1/-1}.lead-field label,.budget-title{color:#111;font-size:14px;font-weight:700}
-    .lead-field input{width:100%;min-height:50px;padding:12px 15px;box-sizing:border-box;color:#111;background:#fff;border:1px solid #d8d8d8;border-radius:12px;outline:none;transition:.2s ease}.lead-field input::placeholder{color:#929292}.lead-field input:focus{background:#fff;border-color:#df1f2d;box-shadow:0 0 0 4px rgba(223,31,45,.1)}
-    .lead-phone{display:flex;direction:ltr;gap:8px}.lead-phone select{width:106px;min-height:50px;padding:0 9px;color:#111;background:#fff;border:1px solid #d8d8d8;border-radius:12px;outline:none;font-weight:600}.lead-phone input{flex:1;direction:ltr;text-align:left}
-    .budget-options{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:8px}.budget-option{position:relative;cursor:pointer}.budget-option input{position:absolute;opacity:0;pointer-events:none}.budget-option span{display:flex;align-items:center;justify-content:center;min-height:54px;padding:8px;color:#111;background:#fff;border:1px solid #d8d8d8;border-radius:12px;font-size:13px;font-weight:600;text-align:center;transition:.2s ease}.budget-option input:checked+span{color:#fff!important;background:#df1f2d;border-color:#df1f2d;box-shadow:inset 0 0 0 1px #df1f2d}.budget-option input:focus-visible+span{box-shadow:0 0 0 4px rgba(223,31,45,.12)}
-    .lead-submit{grid-column:1/-1;min-height:54px;margin-top:4px;border:0;border-radius:13px;color:#fff!important;background:#df1f2d;box-shadow:0 12px 28px rgba(223,31,45,.22);font-size:16px;font-weight:800;cursor:pointer;transition:.2s ease}.lead-submit:hover{color:#fff!important;background:#bd1522;transform:translateY(-2px);box-shadow:0 16px 34px rgba(223,31,45,.3)}.lead-success{grid-column:1/-1;margin:0;padding:12px 15px;color:#111;background:#fff1f2;border:1px solid #f4c5c9;border-radius:11px;font-weight:700;text-align:center}
-    @media(max-width:620px){.lead-modal{padding:12px}.lead-card{margin:12px auto;padding:30px 20px 22px;border-radius:19px}.lead-form{grid-template-columns:1fr;gap:14px}.lead-full,.lead-submit,.lead-success{grid-column:1}.budget-options{grid-template-columns:1fr}}
+    .lead-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      padding: 24px;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, .74);
+      backdrop-filter: blur(8px)
+    }
+
+    .lead-card {
+      position: relative;
+      width: min(100%, 590px);
+      margin: 28px auto;
+      padding: 36px;
+      box-sizing: border-box;
+      background: #fff;
+      border: 1px solid #e3e3e3;
+      border-radius: 24px;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .28)
+    }
+
+    .lead-close {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 50%;
+      color: #111;
+      background: #f4f4f4;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      transition: .2s ease
+    }
+
+    .lead-close:hover {
+      color: #fff !important;
+      background: #df1f2d;
+      transform: rotate(8deg)
+    }
+
+    .lead-eyebrow {
+      margin: 0 0 7px;
+      color: #df1f2d;
+      font-size: 14px;
+      font-weight: 700
+    }
+
+    .lead-title {
+      margin: 0;
+      color: #111;
+      font-size: clamp(27px, 4vw, 36px);
+      line-height: 1.25
+    }
+
+    .lead-intro {
+      margin: 9px 0 25px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7
+    }
+
+    .lead-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px
+    }
+
+    .lead-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .lead-full {
+      grid-column: 1/-1
+    }
+
+    .lead-field label,
+    .budget-title {
+      color: #111;
+      font-size: 14px;
+      font-weight: 700
+    }
+
+    .lead-field input {
+      width: 100%;
+      min-height: 50px;
+      padding: 12px 15px;
+      box-sizing: border-box;
+      color: #111;
+      background: #fff;
+      border: 1px solid #d8d8d8;
+      border-radius: 12px;
+      outline: none;
+      transition: .2s ease
+    }
+
+    .lead-field input::placeholder {
+      color: #929292
+    }
+
+    .lead-field input:focus {
+      background: #fff;
+      border-color: #df1f2d;
+      box-shadow: 0 0 0 4px rgba(223, 31, 45, .1)
+    }
+
+    .lead-phone {
+      display: flex;
+      direction: ltr;
+      gap: 8px
+    }
+
+    .lead-phone select {
+      width: 106px;
+      min-height: 50px;
+      padding: 0 9px;
+      color: #111;
+      background: #fff;
+      border: 1px solid #d8d8d8;
+      border-radius: 12px;
+      outline: none;
+      font-weight: 600
+    }
+
+    .lead-phone input {
+      flex: 1;
+      direction: ltr;
+      text-align: left
+    }
+
+    .budget-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-top: 8px
+    }
+
+    .budget-option {
+      position: relative;
+      cursor: pointer
+    }
+
+    .budget-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .budget-option span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 8px;
+      color: #111;
+      background: #fff;
+      border: 1px solid #d8d8d8;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      transition: .2s ease
+    }
+
+    .budget-option input:checked+span {
+      color: #fff !important;
+      background: #df1f2d;
+      border-color: #df1f2d;
+      box-shadow: inset 0 0 0 1px #df1f2d
+    }
+
+    .budget-option input:focus-visible+span {
+      box-shadow: 0 0 0 4px rgba(223, 31, 45, .12)
+    }
+
+    .lead-submit {
+      grid-column: 1/-1;
+      min-height: 54px;
+      margin-top: 4px;
+      border: 0;
+      border-radius: 13px;
+      color: #fff !important;
+      background: #df1f2d;
+      box-shadow: 0 12px 28px rgba(223, 31, 45, .22);
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .2s ease
+    }
+
+    .lead-submit:hover {
+      color: #fff !important;
+      background: #bd1522;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(223, 31, 45, .3)
+    }
+
+    .lead-success {
+      grid-column: 1/-1;
+      margin: 0;
+      padding: 12px 15px;
+      color: #111;
+      background: #fff1f2;
+      border: 1px solid #f4c5c9;
+      border-radius: 11px;
+      font-weight: 700;
+      text-align: center
+    }
+
+    @media(max-width:620px) {
+      .lead-modal {
+        padding: 12px
+      }
+
+      .lead-card {
+        margin: 12px auto;
+        padding: 30px 20px 22px;
+        border-radius: 19px
+      }
+
+      .lead-form {
+        grid-template-columns: 1fr;
+        gap: 14px
+      }
+
+      .lead-full,
+      .lead-submit,
+      .lead-success {
+        grid-column: 1
+      }
+
+      .budget-options {
+        grid-template-columns: 1fr
+      }
+    }
   </style>
   <div id="contactModal" class="lead-modal" role="dialog" aria-modal="true" aria-labelledby="leadFormTitle">
     <div class="lead-card">
@@ -38,20 +268,41 @@
       <h3 class="lead-title" id="leadFormTitle">خلّنا نتعرف على مشروعك</h3>
       <p class="lead-intro">شاركنا التفاصيل الأساسية، وسيتواصل معك فريقنا لمناقشة الفرصة المناسبة لنمو متجرك.</p>
       <form id="contactForm" action="https://formspree.io/f/xjgjjenp" method="POST" class="lead-form">
-        <div class="lead-field"><label for="fullName">الاسم</label><input id="fullName" type="text" name="full_name" placeholder="اكتب اسمك الكامل" autocomplete="name" required></div>
-        <div class="lead-field"><label for="companyName">اسم الشركة</label><input id="companyName" type="text" name="company_name" placeholder="اسم شركتك أو متجرك" autocomplete="organization" required></div>
-        <div class="lead-field"><label for="phone">رقم الموبايل</label><div class="lead-phone"><select name="country_code" aria-label="كود الدولة"><option value="+971" selected>🇦🇪 +971</option><option value="+966">🇸🇦 +966</option><option value="+965">🇰🇼 +965</option><option value="+973">🇧🇭 +973</option><option value="+974">🇶🇦 +974</option><option value="+968">🇴🇲 +968</option></select><input id="phone" type="tel" name="phone" placeholder="50 123 4567" autocomplete="tel-national" inputmode="tel" required></div></div>
-        <div class="lead-field"><label for="email">الإيميل</label><input id="email" type="email" name="email" placeholder="name@company.com" autocomplete="email" dir="ltr" required></div>
-        <div class="lead-field lead-full"><span class="budget-title">ميزانية الإعلانات الشهرية</span><div class="budget-options"><label class="budget-option"><input type="radio" name="ad_budget" value="أقل من 5,000 درهم" required><span>أقل من 5,000 درهم</span></label><label class="budget-option"><input type="radio" name="ad_budget" value="5,000 – 10,000 درهم"><span>5,000 – 10,000 درهم</span></label><label class="budget-option"><input type="radio" name="ad_budget" value="أكثر من 10,000 درهم"><span>أكثر من 10,000 درهم</span></label></div></div>
-        <div class="lead-field lead-full"><label for="storeUrl">رابط المتجر <span style="color:#111;font-weight:500">(اختياري)</span></label><input id="storeUrl" type="url" name="store_url" placeholder="https://yourstore.com" autocomplete="url" dir="ltr"></div>
-        <p id="successMessage" class="lead-success" style="display:none">تم إرسال بياناتك بنجاح، سنتواصل معك قريبًا ✓</p>
+        <div class="lead-field"><label for="fullName">الاسم</label><input id="fullName" type="text" name="full_name"
+            placeholder="اكتب اسمك الكامل" autocomplete="name" required></div>
+        <div class="lead-field"><label for="companyName">اسم الشركة</label><input id="companyName" type="text"
+            name="company_name" placeholder="اسم شركتك أو متجرك" autocomplete="organization" required></div>
+        <div class="lead-field"><label for="phone">رقم الموبايل</label>
+          <div class="lead-phone"><select name="country_code" aria-label="كود الدولة">
+              <option value="+971" selected>🇦🇪 +971</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+965">🇰🇼 +965</option>
+              <option value="+973">🇧🇭 +973</option>
+              <option value="+974">🇶🇦 +974</option>
+              <option value="+968">🇴🇲 +968</option>
+            </select><input id="phone" type="tel" name="phone" placeholder="50 123 4567" autocomplete="tel-national"
+              inputmode="tel" required></div>
+        </div>
+        <div class="lead-field"><label for="email">الإيميل</label><input id="email" type="email" name="email"
+            placeholder="name@company.com" autocomplete="email" dir="ltr" required></div>
+        <div class="lead-field lead-full"><span class="budget-title">ميزانية الإعلانات الشهرية</span>
+          <div class="budget-options"><label class="budget-option"><input type="radio" name="ad_budget"
+                value="أقل من 5,000 درهم" required><span>أقل من 5,000 درهم</span></label><label
+              class="budget-option"><input type="radio" name="ad_budget" value="5,000 – 10,000 درهم"><span>5,000 –
+                10,000 درهم</span></label><label class="budget-option"><input type="radio" name="ad_budget"
+                value="أكثر من 10,000 درهم"><span>أكثر من 10,000 درهم</span></label></div>
+        </div>
+        <div class="lead-field lead-full"><label for="storeUrl">رابط المتجر <span
+              style="color:#111;font-weight:500">(اختياري)</span></label><input id="storeUrl" type="url"
+            name="store_url" placeholder="https://yourstore.com" autocomplete="url" dir="ltr"></div>
+        <p id="successMessage" class="lead-success" style="display:none">تم إرسال بياناتك بنجاح، سنتواصل معك قريبًا ✓
+        </p>
         <input type="hidden" name="full_phone" id="fullPhone">
         <button type="submit" class="lead-submit">إرسال البيانات</button>
       </form>
     </div>
   </div>
-  <div id="legacyContactModal"
-    style="display:none !important;">
+  <div id="legacyContactModal" style="display:none !important;">
 
     <div
       style="background:#fff; width:90%; max-width:500px; margin:80px auto; padding:25px; border-radius:10px; position:relative;">
@@ -243,7 +494,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: -1.5rem;
       background: rgba(0, 0, 0, 0.4);
       z-index: -1;
     }
@@ -5008,7 +5259,7 @@
     .audit-comparison-caption {
       position: absolute;
       inset-inline: 1rem;
-      bottom: 1rem;
+      bottom: 0;
       z-index: 8;
       margin: 0;
       padding: .65rem .9rem;
@@ -5273,10 +5524,10 @@
                 </div>
                 <div class="compare" style="--pos:35%;" data-v-100b91bc><img class="compare-img img-before"
                     src="images/shift-section/قبل.webp" alt="Before — product" draggable="false" data-v-100b91bc>
-                  <div class="after-wrap" data-v-100b91bc><img class="compare-img img-after" src="images/shift-section/"
-                      alt="After — model wearing product" draggable="false" data-v-100b91bc></div><span
-                    class="lbl lbl-before" style="opacity:1;" data-v-100b91bc>قبل</span><span class="lbl lbl-after"
-                    style="opacity:1;" data-v-100b91bc>بعد</span>
+                  <div class="after-wrap" data-v-100b91bc><img class="compare-img img-after"
+                      src="images/shift-section/بعد.webp" alt="After — model wearing product" draggable="false"
+                      data-v-100b91bc></div><span class="lbl lbl-before" style="opacity:1;"
+                    data-v-100b91bc>قبل</span><span class="lbl lbl-after" style="opacity:1;" data-v-100b91bc>بعد</span>
                   <div class="divider" aria-hidden="true" data-v-100b91bc></div>
                   <div class="handle" role="slider" aria-label="Drag to compare before and after" aria-valuenow="35"
                     aria-valuemin="0" aria-valuemax="100" tabindex="0" data-v-100b91bc></div>
@@ -5687,27 +5938,30 @@
             <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
               <defs>
                 <radialGradient id="instagram-gradient" cx="30%" cy="107%" r="130%">
-                  <stop offset="0" stop-color="#FFD600"/>
-                  <stop offset=".32" stop-color="#FF7A00"/>
-                  <stop offset=".58" stop-color="#FF0169"/>
-                  <stop offset=".82" stop-color="#D300C5"/>
-                  <stop offset="1" stop-color="#7638FA"/>
+                  <stop offset="0" stop-color="#FFD600" />
+                  <stop offset=".32" stop-color="#FF7A00" />
+                  <stop offset=".58" stop-color="#FF0169" />
+                  <stop offset=".82" stop-color="#D300C5" />
+                  <stop offset="1" stop-color="#7638FA" />
                 </radialGradient>
               </defs>
-              <rect width="32" height="32" rx="8" fill="url(#instagram-gradient)"/>
-              <rect x="7.5" y="7.5" width="17" height="17" rx="5.5" fill="none" stroke="#fff" stroke-width="2.2"/>
-              <circle cx="16" cy="16" r="4.1" fill="none" stroke="#fff" stroke-width="2.2"/>
-              <circle cx="22.1" cy="9.9" r="1.35" fill="#fff"/>
+              <rect width="32" height="32" rx="8" fill="url(#instagram-gradient)" />
+              <rect x="7.5" y="7.5" width="17" height="17" rx="5.5" fill="none" stroke="#fff" stroke-width="2.2" />
+              <circle cx="16" cy="16" r="4.1" fill="none" stroke="#fff" stroke-width="2.2" />
+              <circle cx="22.1" cy="9.9" r="1.35" fill="#fff" />
             </svg>
             <span class="sr-only">Instagram</span>
           </a>
           <a class="footer__tiktok" href="https://www.tiktok.com/@ogoperation" target="_blank" rel="noopener noreferrer"
             aria-label="TikTok" data-v-0353b646>
             <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
-              <rect width="32" height="32" rx="8" fill="#111111"/>
-              <path fill="#25F4EE" d="M19.3 7h-3.2v12.5a3.1 3.1 0 1 1-2.7-3.1v-3.2a6.3 6.3 0 1 0 5.9 6.3v-6.4a8.2 8.2 0 0 0 4.8 1.6v-3.2A4.8 4.8 0 0 1 19.3 7Z"/>
-              <path fill="#FE2C55" d="M20.7 8.4h-3.2v12.5a3.1 3.1 0 1 1-2.7-3.1v-3.2a6.3 6.3 0 1 0 5.9 6.3v-6.4a8.2 8.2 0 0 0 4.8 1.6v-3.2a4.8 4.8 0 0 1-4.8-4.5Z"/>
-              <path fill="#FFFFFF" d="M20 7.7h-3.2v12.5a3.1 3.1 0 1 1-2.7-3.1v-3.2a6.3 6.3 0 1 0 5.9 6.3v-6.4a8.2 8.2 0 0 0 4.8 1.6v-3.2A4.8 4.8 0 0 1 20 7.7Z"/>
+              <rect width="32" height="32" rx="8" fill="#111111" />
+              <path fill="#25F4EE"
+                d="M19.3 7h-3.2v12.5a3.1 3.1 0 1 1-2.7-3.1v-3.2a6.3 6.3 0 1 0 5.9 6.3v-6.4a8.2 8.2 0 0 0 4.8 1.6v-3.2A4.8 4.8 0 0 1 19.3 7Z" />
+              <path fill="#FE2C55"
+                d="M20.7 8.4h-3.2v12.5a3.1 3.1 0 1 1-2.7-3.1v-3.2a6.3 6.3 0 1 0 5.9 6.3v-6.4a8.2 8.2 0 0 0 4.8 1.6v-3.2a4.8 4.8 0 0 1-4.8-4.5Z" />
+              <path fill="#FFFFFF"
+                d="M20 7.7h-3.2v12.5a3.1 3.1 0 1 1-2.7-3.1v-3.2a6.3 6.3 0 1 0 5.9 6.3v-6.4a8.2 8.2 0 0 0 4.8 1.6v-3.2A4.8 4.8 0 0 1 20 7.7Z" />
             </svg>
             <span class="sr-only">TikTok</span>
           </a>
