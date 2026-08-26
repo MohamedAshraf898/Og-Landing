@@ -37,7 +37,7 @@
   function initTypewriter() {
     const target = document.querySelector('.hero__typed');
     if (!target) return;
-    const phrases = ['بدون إعلانات منفصلة عن استراتيجية البراند.', 'بدون محتوى بلا هدف', 'بدون حلول متفرقة'];
+    const phrases = ['بدون إعلانات منفصلة عن استراتيجية البراند', 'بدون محتوى عشوائي', 'بدون حلول متفرقة'];
     if (reduceMotion) { target.textContent = phrases[0]; return; }
     let phrase = 0, letter = 0, deleting = false;
     function tick() {

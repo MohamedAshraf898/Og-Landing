@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <!-- Mirrored from qeen.ai/ar by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Aug 2026 14:02:10 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
@@ -7,10 +7,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>og - The Growth Platform for E-commerce in the GCC and MENA region. We help brands scale with AI-powered
-    marketing that drives real revenue.</title>
+  <title>OG | منظومة تسويق متكاملة للعلامات التجارية في الإمارات</title>
   <meta name="description"
-    content="The Growth Platform for E-commerce in the GCC and MENA region. We help brands scale with AI-powered marketing that drives real revenue.">
+    content="بخبرة فريقنا ودعم الذكاء الاصطناعي، نبني للعلامات التجارية في الإمارات منظومة تسويق متكاملة: استراتيجية، محتوى، وإعلانات تدفع نموًا قابلًا للقياس.">
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -19,8 +18,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <div id="contactModal"
-    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999;">
+  <style>
+    .lead-modal{display:none;position:fixed;inset:0;z-index:10000;padding:24px;overflow-y:auto;background:rgba(0,0,0,.74);backdrop-filter:blur(8px)}
+    .lead-card{position:relative;width:min(100%,590px);margin:28px auto;padding:36px;box-sizing:border-box;background:#fff;border:1px solid #e3e3e3;border-radius:24px;box-shadow:0 28px 80px rgba(0,0,0,.28)}
+    .lead-close{position:absolute;top:18px;left:18px;width:38px;height:38px;border:0;border-radius:50%;color:#111;background:#f4f4f4;font-size:24px;line-height:1;cursor:pointer;transition:.2s ease}
+    .lead-close:hover{color:#fff!important;background:#df1f2d;transform:rotate(8deg)}
+    .lead-eyebrow{margin:0 0 7px;color:#df1f2d;font-size:14px;font-weight:700}.lead-title{margin:0;color:#111;font-size:clamp(27px,4vw,36px);line-height:1.25}.lead-intro{margin:9px 0 25px;color:#555;font-size:15px;line-height:1.7}
+    .lead-form{display:grid;grid-template-columns:1fr 1fr;gap:17px}.lead-field{display:flex;flex-direction:column;gap:7px}.lead-full{grid-column:1/-1}.lead-field label,.budget-title{color:#111;font-size:14px;font-weight:700}
+    .lead-field input{width:100%;min-height:50px;padding:12px 15px;box-sizing:border-box;color:#111;background:#fff;border:1px solid #d8d8d8;border-radius:12px;outline:none;transition:.2s ease}.lead-field input::placeholder{color:#929292}.lead-field input:focus{background:#fff;border-color:#df1f2d;box-shadow:0 0 0 4px rgba(223,31,45,.1)}
+    .lead-phone{display:flex;direction:ltr;gap:8px}.lead-phone select{width:106px;min-height:50px;padding:0 9px;color:#111;background:#fff;border:1px solid #d8d8d8;border-radius:12px;outline:none;font-weight:600}.lead-phone input{flex:1;direction:ltr;text-align:left}
+    .budget-options{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:8px}.budget-option{position:relative;cursor:pointer}.budget-option input{position:absolute;opacity:0;pointer-events:none}.budget-option span{display:flex;align-items:center;justify-content:center;min-height:54px;padding:8px;color:#111;background:#fff;border:1px solid #d8d8d8;border-radius:12px;font-size:13px;font-weight:600;text-align:center;transition:.2s ease}.budget-option input:checked+span{color:#fff!important;background:#df1f2d;border-color:#df1f2d;box-shadow:inset 0 0 0 1px #df1f2d}.budget-option input:focus-visible+span{box-shadow:0 0 0 4px rgba(223,31,45,.12)}
+    .lead-submit{grid-column:1/-1;min-height:54px;margin-top:4px;border:0;border-radius:13px;color:#fff!important;background:#df1f2d;box-shadow:0 12px 28px rgba(223,31,45,.22);font-size:16px;font-weight:800;cursor:pointer;transition:.2s ease}.lead-submit:hover{color:#fff!important;background:#bd1522;transform:translateY(-2px);box-shadow:0 16px 34px rgba(223,31,45,.3)}.lead-success{grid-column:1/-1;margin:0;padding:12px 15px;color:#111;background:#fff1f2;border:1px solid #f4c5c9;border-radius:11px;font-weight:700;text-align:center}
+    @media(max-width:620px){.lead-modal{padding:12px}.lead-card{margin:12px auto;padding:30px 20px 22px;border-radius:19px}.lead-form{grid-template-columns:1fr;gap:14px}.lead-full,.lead-submit,.lead-success{grid-column:1}.budget-options{grid-template-columns:1fr}}
+  </style>
+  <div id="contactModal" class="lead-modal" role="dialog" aria-modal="true" aria-labelledby="leadFormTitle">
+    <div class="lead-card">
+      <button type="button" class="lead-close" onclick="closeModal()" aria-label="إغلاق">&times;</button>
+      <p class="lead-eyebrow">ابدأ رحلة نمو علامتك</p>
+      <h3 class="lead-title" id="leadFormTitle">خلّنا نتعرف على مشروعك</h3>
+      <p class="lead-intro">شاركنا التفاصيل الأساسية، وسيتواصل معك فريقنا لمناقشة الفرصة المناسبة لنمو متجرك.</p>
+      <form id="contactForm" action="https://formspree.io/f/xjgjjenp" method="POST" class="lead-form">
+        <div class="lead-field"><label for="fullName">الاسم</label><input id="fullName" type="text" name="full_name" placeholder="اكتب اسمك الكامل" autocomplete="name" required></div>
+        <div class="lead-field"><label for="companyName">اسم الشركة</label><input id="companyName" type="text" name="company_name" placeholder="اسم شركتك أو متجرك" autocomplete="organization" required></div>
+        <div class="lead-field"><label for="phone">رقم الموبايل</label><div class="lead-phone"><select name="country_code" aria-label="كود الدولة"><option value="+971" selected>🇦🇪 +971</option><option value="+966">🇸🇦 +966</option><option value="+965">🇰🇼 +965</option><option value="+973">🇧🇭 +973</option><option value="+974">🇶🇦 +974</option><option value="+968">🇴🇲 +968</option></select><input id="phone" type="tel" name="phone" placeholder="50 123 4567" autocomplete="tel-national" inputmode="tel" required></div></div>
+        <div class="lead-field"><label for="email">الإيميل</label><input id="email" type="email" name="email" placeholder="name@company.com" autocomplete="email" dir="ltr" required></div>
+        <div class="lead-field lead-full"><span class="budget-title">ميزانية الإعلانات الشهرية</span><div class="budget-options"><label class="budget-option"><input type="radio" name="ad_budget" value="أقل من 5,000 درهم" required><span>أقل من 5,000 درهم</span></label><label class="budget-option"><input type="radio" name="ad_budget" value="5,000 – 10,000 درهم"><span>5,000 – 10,000 درهم</span></label><label class="budget-option"><input type="radio" name="ad_budget" value="أكثر من 10,000 درهم"><span>أكثر من 10,000 درهم</span></label></div></div>
+        <div class="lead-field lead-full"><label for="storeUrl">رابط المتجر <span style="color:#111;font-weight:500">(اختياري)</span></label><input id="storeUrl" type="url" name="store_url" placeholder="https://yourstore.com" autocomplete="url" dir="ltr"></div>
+        <p id="successMessage" class="lead-success" style="display:none">تم إرسال بياناتك بنجاح، سنتواصل معك قريبًا ✓</p>
+        <input type="hidden" name="full_phone" id="fullPhone">
+        <button type="submit" class="lead-submit">إرسال البيانات</button>
+      </form>
+    </div>
+  </div>
+  <div id="legacyContactModal"
+    style="display:none !important;">
 
     <div
       style="background:#fff; width:90%; max-width:500px; margin:80px auto; padding:25px; border-radius:10px; position:relative;">
@@ -31,7 +62,7 @@
       <h3 style="margin-bottom:15px;">Contact Us</h3>
 
       <!-- FORM HERE -->
-      <form id="contactForm" action="https://formspree.io/f/xjgjjenp" method="POST"
+      <form id="legacyContactForm" action="https://formspree.io/f/xjgjjenp" method="POST"
         style="display:flex; flex-direction:column; gap:10px;">
 
         <!-- Full Name -->
@@ -67,11 +98,11 @@
         <input type="email" name="email" placeholder="Email Address" required
           style="padding:12px; border:1px solid #ccc; border-radius:6px;">
 
-        <p id="successMessage" style="display:none; color:green; font-weight:bold;">
+        <p id="legacySuccessMessage" style="display:none; color:green; font-weight:bold;">
           Message sent successfully ✅
         </p>
         <!-- Hidden full phone (optional but useful) -->
-        <input type="hidden" name="full_phone" id="fullPhone">
+        <input type="hidden" name="full_phone" id="legacyFullPhone">
         <button type="submit"
           style="padding:12px; background:black; color:white; border:none; border-radius:6px; cursor:pointer;">
           Send Message
@@ -97,6 +128,10 @@
 
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
+
+      const countryCode = form.querySelector('[name="country_code"]').value;
+      const phoneNumber = form.querySelector('[name="phone"]').value.trim();
+      document.getElementById("fullPhone").value = countryCode + phoneNumber;
 
       const data = new FormData(form);
 
@@ -4953,26 +4988,96 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="format-detection" content="telephone=no">
+  <style>
+    html,
+    body,
+    #__nuxt,
+    .layout {
+      direction: rtl;
+    }
+
+    body {
+      text-align: right;
+    }
+
+    .nav__links,
+    .nav__mobile-links {
+      direction: rtl;
+    }
+
+    .audit-comparison-caption {
+      position: absolute;
+      inset-inline: 1rem;
+      bottom: 1rem;
+      z-index: 8;
+      margin: 0;
+      padding: .65rem .9rem;
+      border-radius: .75rem;
+      background: rgba(255, 255, 255, .92);
+      color: #111;
+      font-size: clamp(.75rem, 1.2vw, .95rem);
+      line-height: 1.6;
+      text-align: right;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .12);
+    }
+
+    .footer__social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+    }
+
+    .footer__tiktok {
+      display: inline-grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 50%;
+      background: #fff;
+      color: #000;
+      font: 700 24px/1 sans-serif;
+      text-decoration: none;
+    }
+
+    .footer__corporate {
+      margin: .75rem 0 0;
+    }
+
+    .footer__corporate a {
+      color: inherit;
+      text-underline-offset: .25em;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
   <script id="unhead:payload"
-    type="application/json">{"title":"qeen - For eCommerce in the GCC and without retainers."}</script>
+    type="application/json">{"title":"OG | منظومة تسويق متكاملة للعلامات التجارية في الإمارات"}</script>
 </head>
 
 <body>
   <div id="__nuxt">
     <div class="layout" dir="rtl" data-v-0353b646>
-      <header class="layout__header" data-v-0353b646>
-        <nav class="layout__nav" data-v-0353b646>
-          <div class="nav__left" data-v-0353b646><a aria-current="page" href="https://ogoperation.com/"
-              class="router-link-active router-link-exact-active nav__brand" title="الرئيسية" data-v-0353b646><img
-                src="images/1-04.png" width="100px !important" height="100px" alt="Logo" data-v-0353b646></a></div>
-          <div class="nav__right" data-v-0353b646>
-            <div class="nav__links nav__links--desktop" data-v-0353b646><a aria-current="page"
-                href="https://ogoperation.com/"
+      <header class="layout__header" data-v-0353b646 dir="rtl">
+        <nav class="layout__nav" data-v-0353b646 dir="rtl">
+
+          <div class="nav__left" data-v-0353b646 dir="rtl">
+            <div class="nav__links nav__links--desktop" data-v-0353b646 dir="rtl"><a aria-current="page" href="#hero"
                 class="router-link-active router-link-exact-active nav__links--desktop-extra active"
-                data-v-0353b646>الرئيسية</a><a href="https://ogoperation.com/about.html"
-                class="nav__links--desktop-extra" data-v-0353b646>من
-                نحن</a><a href="https://ogoperation.com/service.html" target="_blank" rel="noopener noreferrer"
-                class="nav__links--desktop-extra" data-v-0353b646>خدماتنا</a>
+                data-v-0353b646>الرئيسية</a><a href="#how-it-works" class="nav__links--desktop-extra"
+                data-v-0353b646>النظام</a><a href="#client-results" class="nav__links--desktop-extra"
+                data-v-0353b646>النتائج</a><a href="#plans" class="nav__links--desktop-extra"
+                data-v-0353b646>خدماتنا</a>
               <!-- <a href="https://app.qeen.ai/en"
                 target="_blank" rel="noopener noreferrer" class="nav__links--desktop-extra" data-v-0353b646>تسجيل
                 الدخول</a> -->
@@ -4983,14 +5088,17 @@
                 data-v-0353b646><span data-v-0353b646></span><span data-v-0353b646></span><span
                 data-v-0353b646></span></button>
           </div>
+          <div class="nav__right" data-v-0353b646 dir="rtl"><a aria-current="page" href="#hero"
+              class="router-link-active router-link-exact-active nav__brand" title="الرئيسية" data-v-0353b646><img
+                src="images/1-04.png" width="100px !important" height="100px" alt="Logo" data-v-0353b646></a></div>
         </nav>
         <div class="nav__mobile" data-v-0353b646>
           <div class="nav__mobile-content" data-v-0353b646>
-            <div class="nav__mobile-links" data-v-0353b646><a aria-current="page" href="https://ogoperation.com/"
+            <div class="nav__mobile-links" data-v-0353b646 dir="rtl"><a aria-current="page" href="#hero"
                 class="router-link-active router-link-exact-active active" data-v-0353b646>الرئيسية</a><a
-                href="https://ogoperation.com/about.html" class="" data-v-0353b646>من نحن</a><a
-                href="https://ogoperation.com/service.html" target="_blank" rel="noopener noreferrer"
-                class="nav__links--desktop-extra" data-v-0353b646>خدماتنا</a>
+                href="#how-it-works" class="" data-v-0353b646>النظام</a><a href="#client-results" class=""
+                data-v-0353b646>النتائج</a><a href="#plans" class="nav__links--desktop-extra"
+                data-v-0353b646>خدماتنا</a>
               <!-- <a href="https://app.qeen.ai/en" target="_blank"
                 rel="noopener noreferrer" data-v-0353b646>تسجيل الدخول</a> -->
             </div>
@@ -5003,21 +5111,19 @@
             <div class="hero-container" data-v-ce15d7ca>
               <section class="hero-section-1" data-v-ce15d7ca>
                 <h1 class="hero__title" data-v-ce15d7ca>التسويق .. أخيراً صار له نظام!<!----></h1>
-                <p class="hero__subtitle" data-v-ce15d7ca>بخبرة فريقنا، ودعم الذكاء الاصطناعي</p>
-                <p class="hero__description" data-v-ce15d7ca> منظومة تسويق متكاملة للعلامات التجارية في الإمارات.
-                </p>
+                <p class="hero__subtitle" data-v-ce15d7ca>بخبرة فريقنا ودعم الذكاء الاصطناعي، نبني لعلامتك منظومة تسويق
+                  متكاملة في الإمارات.</p>
                 <div class="hero__media" data-v-ce15d7ca><span class="hero__typed" data-v-ce15d7ca></span></div>
               </section>
               <section class="hero-section-2" data-v-ce15d7ca>
                 <p class="hero__description-bottom" data-v-ce15d7ca>
-                  لا تدفع اشتراكات ثابتة
-                  <br>
-                  استثمارك يرتبط بالنتائج اللي نحققها معك
+                  لا تدفع اشتراكات ثابتة — استثمارك مرتبط بالنتائج التي نحققها معك.
 
                 </p>
                 <div class="hero__cta-group" data-v-ce15d7ca><button id="cta-primary-hero"
-                    class="hero__cta-primary cta hero__cta" q-gtm="cta hero__cta cta-primary-hero" data-v-ce15d7ca>احجز
-                    على مراجعة مجانية</button><a href="#how-it-works" id="cta-secondary-hero"
+                    class="hero__cta-primary cta hero__cta" q-gtm="cta hero__cta cta-primary-hero" data-v-ce15d7ca
+                    onclick="openModal()">احجز
+                    مراجعتك المجانية</button><a href="#how-it-works" id="cta-secondary-hero"
                     class="hero__cta-secondary cta hero__cta" q-gtm="cta hero__cta cta-secondary-hero" data-v-ce15d7ca
                     style="color: #000 !important;">اكتشف تفاصيل النظام</a></div>
                 <div class="hero__animation-wrapper" data-v-ce15d7ca>
@@ -5048,7 +5154,7 @@
             <div class="trusted-brands__container container" dir="rtl" data-v-b4024979>
               <div class="trusted-brands__title" data-v-b4024979><span class="trusted-brands__subtitle" data-v-b4024979>
                   نحوّل طموح العلامات التجارية إلى حضور مؤثر ونتائج قابلة للقياس.
-                  هنحط هنا لوجوهات البراندات اللي اشتغلنا معاهم ويفضل يكونوا متنوعين<br data-v-b4024979></span></div>
+                  <br data-v-b4024979></span></div>
               <div class="trusted-brands__scroll-wrapper" data-v-b4024979>
                 <div class="trusted-brands__rail" style="--duration:18s;" data-v-b4024979>
                   <div class="trusted-brands__group" data-v-b4024979><!--[-->
@@ -5129,10 +5235,10 @@
                 المشكلة</h2>
               <p class="problem-shift__subtitle" data-v-ca9bb102><span data-v-ca9bb102>ليست في التسويق </span><span
                   data-v-ca9bb102>بل في غياب الرؤية.</span></p>
-              <p class="problem-shift__body" data-v-ca9bb102>فوضى المحتوى، تعدد الأدوات، أفكار بدون اتجاه، إعلانات
-                تعمل بمعزل عن الـ Creative والاستراتيجية ما ترتبط بباقي رحلة العميل.
+              <p class="problem-shift__body" data-v-ca9bb102>فوضى المحتوى، تعدد الأدوات، أفكار بدون اتجاه، وإعلانات
+                تعمل بمعزل عن الإبداع، واستراتيجية لا ترتبط ببقية رحلة العميل.
                 <br data-v-ca9bb102>والنتيجة؟
-                ميزانية تُصرف، ومجهود يُبذل، لكن النمو ما يكون بالمستوى المتوقع.
+                ميزانية تُصرف، ومجهود يُبذل، لكن النمو لا يصل إلى المستوى المتوقع.
                 نحن نربط كل جزء ليعمل ضمن منظومة واحدة.
             </div>
             <div class="stage-wrapper" data-v-ca9bb102 data-v-100b91bc>
@@ -5142,6 +5248,8 @@
                 <div class="chart chart-conv chart--embedded-shell" data-v-100b91bc><img
                     src="images/shift-section/c-rate-ar.webp" alt="Conversion Rate" draggable="false" data-v-100b91bc>
                 </div>
+                <p class="audit-comparison-caption" dir="rtl">قبل: جهود متفرقة وأرقام حملة بلا سياق واضح. بعد: نتائج
+                  منظومة OG خلال ٩٠ يومًا.</p>
                 <div class="chart chart-growth chart--embedded-shell" data-v-100b91bc><img
                     src="images/shift-section/g-rate-ar.webp" alt="Growth Rate" draggable="false" data-v-100b91bc
                     style="padding-left: -20px !important;">
@@ -5154,10 +5262,10 @@
                 </div>
                 <div class="compare" style="--pos:35%;" data-v-100b91bc><img class="compare-img img-before"
                     src="images/shift-section/قبل.webp" alt="Before — product" draggable="false" data-v-100b91bc>
-                  <div class="after-wrap" data-v-100b91bc><img class="compare-img img-after"
-                      src="images/shift-section/بعد.webp" alt="After — model wearing product" draggable="false"
-                      data-v-100b91bc></div><span class="lbl lbl-before" style="opacity:1;"
-                    data-v-100b91bc>قبل</span><span class="lbl lbl-after" style="opacity:1;" data-v-100b91bc>بعد</span>
+                  <div class="after-wrap" data-v-100b91bc><img class="compare-img img-after" src="images/shift-section/"
+                      alt="After — model wearing product" draggable="false" data-v-100b91bc></div><span
+                    class="lbl lbl-before" style="opacity:1;" data-v-100b91bc>قبل</span><span class="lbl lbl-after"
+                    style="opacity:1;" data-v-100b91bc>بعد</span>
                   <div class="divider" aria-hidden="true" data-v-100b91bc></div>
                   <div class="handle" role="slider" aria-label="Drag to compare before and after" aria-valuenow="35"
                     aria-valuemin="0" aria-valuemax="100" tabindex="0" data-v-100b91bc></div>
@@ -5219,7 +5327,7 @@
             </div>
             <div class="system__card" data-v-67409985><img src="images/system/system-section1.svg"
                 alt="استراتيجية نمو تضاعف نجاحك باستمرار" class="system__card-icon" data-v-67409985>
-              <p class="system__card-text" data-v-67409985>نقرأ السوق الإماراتي ونحلل المنافسين لتحديد الفرص</p>
+              <p class="system__card-text" data-v-67409985>نقرأ السوق الإماراتي ونحلل المنافسين لتحديد الفرص.</p>
             </div><!--]-->
           </div>
           <div class="system__group" aria-hidden="true" data-v-67409985><!--[-->
@@ -5243,7 +5351,7 @@
         </div>
       </div><button id="cta-system" class="system__cta cta" q-gtm="cta system__cta cta-system" data-v-67409985
         onclick="openModal()">احصل
-        على استشارة مجانية</button>
+        على مراجعة مجانية</button>
     </section>
     <section id="why-qeen-stack" class="why-qeen" aria-labelledby="why-qeen-title" top="80px" data-v-b27626f1
       data-v-bde5893a>
@@ -5251,8 +5359,8 @@
         <div class="why-qeen__header" data-v-bde5893a>
           <h2 id="why-qeen-title" class="why-qeen__title" data-v-bde5893a>لماذا <span class="why-qeen__title-brand"
               data-v-bde5893a>OG؟</span></h2>
-          <p class="why-qeen__subtitle" data-v-bde5893a>الثقة هي البداية، والنتائج هي الدليل
-            نحن شركاء نجاح، ولسنا مجرد مقدمي خدمة.</p>
+          <p class="why-qeen__subtitle" data-v-bde5893a>الثقة هي البداية، والنتائج هي الدليل. نحن شركاء نجاح، ولسنا مجرد
+            مقدمي خدمة.</p>
         </div>
         <div class="why-qeen__grid why-qeen__grid--with-chips" data-v-bde5893a><!--[-->
           <div class="why-qeen__card-wrapper" data-v-bde5893a>
@@ -5362,8 +5470,8 @@
     <section id="client-results" class="client-results" data-v-b27626f1 data-v-2e0ce7eb
       style="background-color: white;">
       <div class="client-results__header" data-v-2e0ce7eb>
-        <h2 class="client-results__title" data-v-2e0ce7eb>علامات تجارية حقيقية . نتائج حقيقية</h2>
-        <p class="client-results__subtitle" data-v-2e0ce7eb>هكذا تبدو النتائج.. حينما يتحول الديجيتال ماركتنج من
+        <h2 class="client-results__title" data-v-2e0ce7eb>علامات تجارية حقيقية.. نتائج حقيقية</h2>
+        <p class="client-results__subtitle" data-v-2e0ce7eb>هكذا تبدو النتائج.. حين يتحول التسويق الرقمي من
           العشوائية إلى النظام المتكامل.</p>
       </div>
       <div class="client-results__video-wrapper">
@@ -5422,7 +5530,7 @@
                 <h3 class="result-card__brand" data-v-b3611011>MAZ</h3>
                 <p class="result-card__quote" data-v-b3611011>ساعدونا على تنمية متجرنا الإلكتروني من خلال استراتيجية
                   متكاملة جمعت
-                  بين المحتوى والإعلانات، وركزت على تحقيق نتائج فعلية وتحويل الزيارات إلى عملاء ومبيعات.»
+                  بين المحتوى والإعلانات، وركزت على تحقيق نتائج فعلية وتحويل الزيارات إلى عملاء ومبيعات.
                 </p>
                 <div class="result-card__author" data-v-b3611011>
                   <p class="result-card__name" data-v-b3611011>علاء خليل</p>
@@ -5430,7 +5538,7 @@
                 </div>
                 <div class="result-card__metrics" data-v-b3611011>
                   <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
-                      data-v-b3611011>٥ X</span><span class="result-card__metric-label" data-v-b3611011>العائد على
+                      data-v-b3611011>٥× مبيعات</span><span class="result-card__metric-label" data-v-b3611011>العائد على
                       الإنفاق الإعلاني</span></div>
                   <div class="result-card__metric" data-v-b3611011><span class="result-card__metric-value"
                       data-v-b3611011>+٤٨٪</span><span class="result-card__metric-label" data-v-b3611011>الإيرادات
@@ -5443,7 +5551,7 @@
               <div class="result-card__overlay" data-v-b3611011></div>
               <div class="result-card__content" data-v-b3611011>
                 <h3 class="result-card__brand" data-v-b3611011>Dropgear</h3>
-                <p class="result-card__quote" data-v-b3611011>توظّيف تقنيات الذكاء الاصطناعي بطريقة ذكية في تطوير
+                <p class="result-card__quote" data-v-b3611011>توظيف تقنيات الذكاء الاصطناعي بطريقة ذكية في تطوير
                   الأفكار وتنفيذ المحتوى، مع الحفاظ على هوية البراند وطابعه الإبداعي
 
                 </p>
@@ -5467,7 +5575,7 @@
               <div class="result-card__content" data-v-b3611011>
                 <h3 class="result-card__brand" data-v-b3611011>Cloud Home</h3>
                 <p class="result-card__quote" data-v-b3611011>من أول خطوة، فريق OG درس السوق والمنافسين بعمق،
-                  وساعدنا نحدد مكانة البراند والفرص الحقيقية للنمو والتميز
+                  وساعدنا على تحديد مكانة البراند والفرص الحقيقية للنمو والتميّز.
                 <div class="result-card__author" data-v-b3611011>
                   <p class="result-card__name" data-v-b3611011>غييرمو خيمينيز</p>
                   <p class="result-card__role" data-v-b3611011>الرئيس التنفيذي</p>
@@ -5516,15 +5624,14 @@
         </h2>
         <div class="plans__subtitle" data-v-fba517ea><!--[-->
           <p class="plans__subtitle-line" data-v-fba517ea>لأننا نؤمن أن التسويق الفعّال لا يبدأ بالتنفيذ، بل يبدأ
-            بالفهم</p>
+            بالفهم.</p>
           <p class="plans__subtitle-line" data-v-fba517ea>لذلك نجمع بين التحليل، والاستراتيجية، والإبداع، والتنفيذ،
-            والأداء ضمن منظومة واحدة.</p>
-          <p class="plans__subtitle-line" data-v-fba517ea>تعمل وفق رؤية واضحة وهدف مشترك.</p><!--]-->
+            والأداء ضمن منظومة واحدة تعمل وفق رؤية واضحة وهدف مشترك.</p><!--]-->
         </div>
         <div class="plans__card" data-v-fba517ea>
           <h3 class="plans__card-title" data-v-fba517ea>خدماتنا</h3>
-          <!-- <p class="plans__card-line" data-v-fba517ea>نموذج قائم على الأداء فقط. بدون التزامات شهرية ثابتة،</p>
-              <p class="plans__card-line" data-v-fba517ea>بل نسبة من المبيعات التي نحققها معاً.</p> -->
+          <p class="plans__card-line" data-v-fba517ea>نموذج قائم على الأداء فقط، دون التزامات شهرية ثابتة.</p>
+          <p class="plans__card-line" data-v-fba517ea>بل نسبة من المبيعات التي نحققها معًا.</p>
           <ul class="plans__features" data-v-fba517ea><!--[-->
             <li data-v-fba517ea>نحلل السوق والمنافسين وسلوك الجمهور لنحدد الفرص، ونبني قرارات تسويقية تمنح علامتك
               ميزة تنافسية واضحة.</li>
@@ -5561,14 +5668,18 @@
     </main>
     <footer class="layout__footer" data-v-0353b646>
       <div class="footer__content" data-v-0353b646>
-        <div class="footer__logo" data-v-0353b646><img src="images/LOGO ICON SIZE W.webp" alt="Qeen Logo"
-            data-v-0353b646>
+        <div class="footer__logo" data-v-0353b646><img src="images/LOGO ICON SIZE W.webp" alt="OG Logo" data-v-0353b646>
         </div>
         <div class="footer__social" data-v-0353b646>
           <a href="https://www.instagram.com/ogoperation.ae?igsi=Ym96aTNpeG0wempl" target="_blank"
             rel="noopener noreferrer" aria-label="Instagram" data-v-0353b646><img src="Instagram-icon.svg"
               alt="Instagram" width="32" height="32" data-v-0353b646></a>
+          <a class="footer__tiktok" href="https://www.tiktok.com/@ogoperation" target="_blank" rel="noopener noreferrer"
+            aria-label="TikTok" data-v-0353b646><span aria-hidden="true">♪</span><span class="sr-only">TikTok</span></a>
         </div>
+        <p class="footer__corporate"><a href="https://ogoperation.com/" target="_blank" rel="noopener noreferrer" style="
+    color: white !important;
+">الموقع المؤسسي لـ OG</a></p>
         <p class="footer__copyright" data-v-0353b646>© 2026 OG. جميع الحقوق محفوظة</p>
       </div>
     </footer><!---->
